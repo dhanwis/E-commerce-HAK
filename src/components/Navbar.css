@@ -1,0 +1,92 @@
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .navcon h4
+  {
+    margin-left: 10px;
+  }
+  /* Styling for "CONTACT US", "SEARCH", and "LOGIN" */
+  .navcon,
+  .navcontent {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navcontent {
+    margin-left: -150px; /* Add margin between elements */
+}
+  
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #f9f9f9;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Close button styling */
+  .close-sidebar {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: right;
+  }
+  
+  /* Sidebar animations */
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .sidebar.closed {
+    transform: translateX(100%);
+  }
+  
+  /* Top slidebar styling */
+.top-slidebar {
+    position: fixed;
+    top: 55px;
+    left: 450px;
+    width: 50%;
+    height: 60px;
+    background: none;
+    padding: 10px;
+    border-radius: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .search-bar {
+    flex: 1;
+    border: 1px solid rgb(250, 43, 140);
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 200px;  /* Set a smaller width */
+    height: 30px;  /* Adjust height if needed */
+    padding: 5px;  /* Modify padding for inner spacing */
+    font-size: 14px;  /* Set font size */
+  }
+  
+  
+  /* Animations for opening and closing the slidebar */
+  .top-slidebar.open {
+    transform: translateY(0);
+  }
+  
+  .top-slidebar.closed {
+    transform: translateY(-100%);
+  }
+  

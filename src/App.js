@@ -1,10 +1,21 @@
-import './App.css';
+import React from 'react';
+import './App.css'; 
+import  Bestsell from './components/Bestsell';
+import Banner from './components/Banner';
+import Navbar from './components/Navbar';
 
-function App() {
+
+const SimpleAnimation = () => {
+ 
+
   return (
-    <div className="App">
+    <div id="page1">
+      <Navbar/>
+      <Banner/>
+     <Bestsell/>
+        
     </div>
   );
-}
+};
 
-export default App;
+export default SimpleAnimation;
