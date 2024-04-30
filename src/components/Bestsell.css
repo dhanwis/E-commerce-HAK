@@ -1,0 +1,21 @@
+.options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .option {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .option:hover {
+    color: #e27ac0; /* Change color on hover */
+  }
+  
+  .option.active {
+    color: rgb(250, 43, 140); /* Active option color */
+  }
+  
