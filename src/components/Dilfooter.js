@@ -1,6 +1,6 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-import './Dilfooter.css';
+
  function Dilfooter() {
   return (
     <MDBFooter style={{ backgroundColor:'rgb(253, 168, 208)' }} className='text-center text-lg-start text-muted'>
