@@ -1,0 +1,20 @@
+.scroll-row {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    padding-bottom: 20px;
+   }
+    .category{
+        border-radius: 50%; /* Ensures the image is completely circular */
+        border: none;
+        background-color:  rgb(253, 168, 208);
+    }
+    .cbackground{
+        border:none;
+    }
+    .ctitle{
+        font-family: serif;
+        font-size:30px;
+        font-weight: bold;
+        color:  rgb(238, 0, 111);
+    }

@@ -3,6 +3,7 @@ import './App.css';
 import  Bestsell from './components/Bestsell';
 import Banner from './components/Banner';
 import Navbar from './components/Navbar';
+import Category from './components/Category';
 
 
 const SimpleAnimation = () => {
@@ -13,6 +14,7 @@ const SimpleAnimation = () => {
       <Navbar/>
       <Banner/>
      <Bestsell/>
+     <Category/>
         
     </div>
   );
