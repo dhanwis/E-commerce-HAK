@@ -113,22 +113,24 @@ function Navbar() {
 
       {/* Login panel */}
       {loginOpen && (
-        <div className="login-panel">
+        <div className="login-panel text-center"><p style={{fontFamily:'serif',fontWeight:'bold'}}>LOGIN</p>
           <div className="login-form">
             <input
               type="text"
               placeholder="Enter Mobile Number"
               value={mobileNumber}
               onChange={(e) => setMobileNumber(e.target.value)}
+              className="login-input"
             />
             {otpSent ? (
               <input
                 type="text"
                 placeholder="Enter OTP"
                 // Handle OTP verification here
+                className="login-input"
               />
             ) : (
-              <button onClick={sendOTP}>Send OTP</button>
+              <button onClick={sendOTP} className="send-otp-btn">Send OTP</button>
             )}
           </div>
           <button className="close-login" onClick={toggleLogin}>

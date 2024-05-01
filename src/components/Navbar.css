@@ -4,13 +4,15 @@
     align-items: center;
     padding-top: 5px;
     height: 70px;
+    cursor: pointer;
   }
   .dillogo{
     margin-top: 100px;
+    margin-left: 10px;
   }
   .navcon h4
   {
-    margin-left: 10px;
+    margin-left: 20px;
   }
   .navcon,
   .navcontent {
@@ -19,7 +21,7 @@
   }
   
   .navcontent {
-    margin-left: -150px; /* Add margin between elements */
+    margin-right: 10px; 
 }
   
 .sidebar {
@@ -57,9 +59,9 @@
   /* Top slidebar styling */
 .top-slidebar {
     position: fixed;
-    top: 55px;
-    left: 450px;
-    width: 50%;
+    top: 5px;
+    left: 700px;
+    width: 32%;
     height: 60px;
     background: none;
     padding: 10px;
@@ -134,5 +136,57 @@
   cursor: pointer;
 }
 
-/* Styling for OTP input fields and generator */
-/* Add your styles here for the OTP input fields and generator */
+/* Add this to your existing Navbar.css file */
+
+/* Login panel styling */
+.login-panel {
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 450px; 
+  justify-content: space-between;
+  background-color: #fff;
+  padding-top: 200px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+  z-index: 1000; 
+  font-size: 25px;
+  background-image: radial-gradient(rgb(250, 172, 198),rgb(250, 43, 140));
+}
+.login-form {
+  margin-bottom: 30px;
+}
+
+.login-input {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid rgb(250, 43, 140);
+  border-radius: 5px;
+
+}
+
+.send-otp-btn {
+  padding: 8px;
+  background-color: rgb(250, 43, 140);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-otp-btn:hover {
+  background-color: #fd8aee; 
+}
+
+.close-login {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #000000;
+}
