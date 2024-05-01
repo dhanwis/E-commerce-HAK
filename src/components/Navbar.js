@@ -7,6 +7,9 @@ function Navbar() {
   const [isVisible, setIsVisible] = useState(false); // Track the visibility of "Contact Us"
   const [sidebarOpen, setSidebarOpen] = useState(false); // Track if sidebar is open
   const [topSlidebarOpen, setTopSlidebarOpen] = useState(false); // Track if top slidebar is open
+  const [loginOpen, setLoginOpen] = useState(false); // Track if login panel is open
+  const [mobileNumber, setMobileNumber] = useState(''); // Track the mobile number input value
+  const [otpSent, setOtpSent] = useState(false); // Track if OTP is sent
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,6 +42,15 @@ function Navbar() {
     setTopSlidebarOpen(false); // Close top slidebar on click
   };
 
+  const toggleLogin = () => {
+    setLoginOpen(!loginOpen); // Toggle login panel on click
+  };
+
+  const sendOTP = () => {
+    // Here you can implement the logic to send OTP to the entered mobile number
+    setOtpSent(true); // Set OTP sent flag to true
+  };
+
   return (
     <div id="nav">
       <div className="navcon">
@@ -67,8 +79,12 @@ function Navbar() {
           onClick={toggleTopSlidebar} // Toggle the top slidebar when clicked
           className={isVisible ? 'visible' : 'hidden'}
           style={{ cursor: 'pointer' }}
-        >SEARCH</h4>
-        <h4 className={isVisible ? 'visible' : 'hidden'}>LOGIN</h4>
+        >
+          SEARCH
+        </h4>
+        <h4 className={isVisible ? 'visible' : 'hidden'} onClick={toggleLogin}>
+          LOGIN
+        </h4>
       </div>
 
       {/* Sidebar with contact details and a close button */}
@@ -92,6 +108,32 @@ function Navbar() {
             placeholder="Search..."
             className="search-bar"
           />
+        </div>
+      )}
+
+      {/* Login panel */}
+      {loginOpen && (
+        <div className="login-panel">
+          <div className="login-form">
+            <input
+              type="text"
+              placeholder="Enter Mobile Number"
+              value={mobileNumber}
+              onChange={(e) => setMobileNumber(e.target.value)}
+            />
+            {otpSent ? (
+              <input
+                type="text"
+                placeholder="Enter OTP"
+                // Handle OTP verification here
+              />
+            ) : (
+              <button onClick={sendOTP}>Send OTP</button>
+            )}
+          </div>
+          <button className="close-login" onClick={toggleLogin}>
+            X
+          </button>
         </div>
       )}
     </div>

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import './Bestsell.css'; // Import your custom CSS file for styling
+import './Bestsell.css'; 
 import banner from '/home/vidya/Documents/DIL-HAK/dil-hakapp/src/ban.webp';
 
 const ProductGallery = () => {
-  // Sample data for bestseller, trending, and featured products (replace with your actual data)
   const bestsellers = [
     { id: 1, name: 'Bestseller 1', imageUrl: banner },
     { id: 2, name: 'Bestseller 2', imageUrl: banner },
@@ -54,9 +53,9 @@ const ProductGallery = () => {
   return (
     <div className="container">
       <div className="options">
-        <span className={`option ${selectedOption === 'bestsellers' ? 'active' : ''}`} onClick={() => setSelectedOption('bestsellers')}>Bestsellers</span>
-        <span className={`option ${selectedOption === 'trending' ? 'active' : ''}`} onClick={() => setSelectedOption('trending')}>Trending Products</span>
-        <span className={`option ${selectedOption === 'featured' ? 'active' : ''}`} onClick={() => setSelectedOption('featured')}>Featured Products</span>
+        <div className={`option ${selectedOption === 'bestsellers' ? 'active' : ''}`} onClick={() => setSelectedOption('bestsellers')}>Bestsellers</div>
+        <div className={`option ${selectedOption === 'trending' ? 'active' : ''}`} onClick={() => setSelectedOption('trending')}>Trending Products</div>
+        <div className={`option ${selectedOption === 'featured' ? 'active' : ''}`} onClick={() => setSelectedOption('featured')}>Featured Products</div>
       </div>
       {selectedOption === 'bestsellers' && renderProductCards(bestsellers)}
       {selectedOption === 'trending' && renderProductCards(trendingProducts)}
