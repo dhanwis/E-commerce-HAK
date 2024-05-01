@@ -5,6 +5,7 @@ import Banner from './components/Banner';
 import Navbar from './components/Navbar';
 import Category from './components/Category';
 import Dilfooter from './components/Dilfooter';
+import Offers from './components/Offers';
 
 
 const SimpleAnimation = () => {
@@ -16,6 +17,7 @@ const SimpleAnimation = () => {
       <Banner/>
      <Bestsell/>
      <Category/>
+     <Offers/>
         <Dilfooter/>
     </div>
   );

@@ -5,7 +5,8 @@ import { Container } from 'react-bootstrap';
 
 function Offers() {
   return (
-    <Container>
+    
+    <Container style={{marginBottom:'20px'}}>
     <Carousel>
       <Carousel.Item>
         <img  src={b4} alt='b1' text="First slide" />
