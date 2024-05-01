@@ -91,8 +91,8 @@ function Navbar() {
       {sidebarOpen && (
         <div className="sidebar">
           <button onClick={closeSidebar} className="close-sidebar">
-            X
-          </button>
+          <i class="fa-solid fa-circle-xmark"></i>
+          </button>&nbsp;&nbsp;
           <ul>
             <li>Phone: 123-456-7890</li>
             <li>Email: contact@dilhak.com</li>
