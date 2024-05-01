@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo1 from '/home/vidya/Documents/DIL-HAK/dil-hakapp/src/logo1.png';
+import logo1 from '../images/logo1.png';
 import './Navbar.css';
 
 function Navbar() {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Bestsell.css'; 
-import banner from '/home/vidya/Documents/DIL-HAK/dil-hakapp/src/ban.webp';
+import banner from '../images/ban.webp';
 
 const ProductGallery = () => {
   const bestsellers = [
