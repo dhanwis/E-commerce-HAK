@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '/home/vidya/Documents/DIL-HAK/dil-hakapp/src/ban.webp';
+import banner from '../images/ban.webp';
 
 function Banner() {
   return (
