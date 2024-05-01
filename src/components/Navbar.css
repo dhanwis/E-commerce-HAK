@@ -124,17 +124,6 @@
   transition: transform 0.3s ease;
 }
 
-/* Close button styling */
-.close-login {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 5px;
-  border: none;
-  background-color: transparent;
-  font-size: 20px;
-  cursor: pointer;
-}
 
 /* Add this to your existing Navbar.css file */
 
@@ -143,14 +132,15 @@
   cursor: pointer;
   position: fixed;
   right: 0;
-  top: 0;
+  margin-right: 450px;
+  margin-top: 100px;
+  height: 70%;
   bottom: 0;
   width: 450px; 
   justify-content: space-between;
   background-color: #fff;
-  padding-top: 200px;
+  padding-top: 150px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
-  z-index: 1000; 
   font-size: 25px;
   background-image: radial-gradient(rgb(250, 172, 198),rgb(250, 43, 140));
 }

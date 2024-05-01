@@ -133,9 +133,6 @@ function Navbar() {
               <button onClick={sendOTP} className="send-otp-btn">Send OTP</button>
             )}
           </div>
-          <button className="close-login" onClick={toggleLogin}>
-            X
-          </button>
         </div>
       )}
     </div>
