@@ -89,14 +89,14 @@ function Navbar() {
 
       {/* Sidebar with contact details and a close button */}
       {sidebarOpen && (
-        <div className="sidebar">
+        <div className="sidebar" >
           <button onClick={closeSidebar} className="close-sidebar">
-          <i class="fa-solid fa-circle-xmark"></i>
+          <i class="fa-solid fa-circle-xmark" style={{backgroundColor:' rgb(253, 168, 208)'}}></i>
           </button>&nbsp;&nbsp;
-          <ul>
-            <li>Phone: 123-456-7890</li>
-            <li>Email: contact@dilhak.com</li>
-            <li>Address: 123 DILHAK St, City</li>
+          <ul style={{backgroundColor:' rgb(253, 168, 208)'}}>
+            <li style={{backgroundColor:' rgb(253, 168, 208)'}}>Phone: 123-456-7890</li>
+            <li style={{backgroundColor:' rgb(253, 168, 208)'}}>Email: contact@dilhak.com</li>
+            <li style={{backgroundColor:' rgb(253, 168, 208)'}}>Address: 123 DILHAK St, City</li>
           </ul>
         </div>
       )}

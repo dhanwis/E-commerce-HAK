@@ -14,7 +14,7 @@
 .dillogo {
   margin-top: 100px;
   margin-left: 10px;
-  /* background:transparent; */
+  background:none; 
 }
 
 /* Contact and Search styles */
@@ -40,7 +40,6 @@
   width: 25%; /* Adjust the width of the sidebar for responsiveness */
   height: 100%;
   background-color: rgb(253, 168, 208);
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   padding: 20px;
   transition: transform 0.3s ease;
 }
