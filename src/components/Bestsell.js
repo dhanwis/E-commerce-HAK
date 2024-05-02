@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './Bestsell.css'; 
-import banner from '../images/ban.webp';
+import banner from '../images/b1.avif';
+import banner2 from '../images/b1.avif'
 
 const ProductGallery = () => {
   const bestsellers = [
     { id: 1, name: 'Bestseller 1', imageUrl: banner },
-    { id: 2, name: 'Bestseller 2', imageUrl: banner },
+    { id: 2, name: 'Bestseller 2', imageUrl: banner2 },
     { id: 3, name: 'Bestseller 3', imageUrl: banner },
     { id: 4, name: 'Bestseller 1', imageUrl: banner },
     { id: 5, name: 'Bestseller 2', imageUrl: banner },

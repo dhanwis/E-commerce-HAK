@@ -6,13 +6,15 @@
   padding: 10px;
   height: 70px; /* Set a fixed height for the navbar */
   cursor: pointer;
-  background-color: rgb(253, 168, 208);
+
+  /* background-color: rgb(253, 168, 208); */
 }
 
 /* Dillogo styles */
 .dillogo {
   margin-top: 100px;
   margin-left: 10px;
+  /* background:transparent; */
 }
 
 /* Contact and Search styles */
@@ -60,7 +62,7 @@
   left: 60%; /* Adjust the left position for responsiveness */
   width: 20%; /* Adjust the width of the top slidebar for responsiveness */
   height: 60px;
-  background: none;
+  /* background: none; */
   padding: 10px;
   border-radius: 20px;
   z-index: 1000;
@@ -82,17 +84,21 @@
 .login-panel {
   cursor: pointer;
   position: fixed;
-  right:320px; /* Adjust the right margin for responsiveness */
-  margin-top: -140px; /* Adjust the top margin for responsiveness */
+  right:540px; /* Adjust the right margin for responsiveness */
+  margin-top: -200px; /* Adjust the top margin for responsiveness */
   height: 70%; /* Set a height for the login panel */
   bottom: 50px;
-  width: 50%; /* Adjust the width of the login panel for responsiveness */
+  width: 40%; /* Adjust the width of the login panel for responsiveness */
   justify-content: space-between;
-  background-color: #fff;
-  padding: 150px;
+  /* background-image: url("b2.jpeg"); */
+  /* background-size: 100% 100%; */
+  background-color: black;
+  padding-top: 250px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   font-size: 25px;
-  background-color: rgb(253, 168, 208);
+  /* background-color: rgb(253, 168, 208); */
+  border-radius: 50px;
+  
 }
 
 .login-form {
@@ -101,7 +107,7 @@
 
 .login-input {
   padding: 8px;
-  width: 100%;
+  width: 90%;
   margin-bottom: 20px;
   border: 1px solid rgb(250, 43, 140);
   border-radius: 5px;

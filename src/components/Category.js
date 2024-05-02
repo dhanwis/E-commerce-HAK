@@ -15,13 +15,13 @@ function Category() {
     <h4 className='ctitle'>Category</h4>
 <Row className='scroll-row'>
  <Col> 
-  <Card   className='cbackground'style={{ width: '9rem' }}>
-    <Card.Img  className='category'variant="top" src={kurtaset}  style={{
+  <Card className='cbackground'style={{ width: '9rem' }}>
+    <Card.Img  className='category' variant="top" src={kurtaset}  style={{
                   borderRadius: '50%',width:'9rem', // Make the image completely circular
                   height: '10rem' // Explicit height to match width
                 }}/>
-     <Card.Body>
-      <Card.Title>Kurta Set</Card.Title>
+     <Card.Body className='cat'>
+      <Card.Title className='cat'>Kurta Set</Card.Title>
     </Card.Body> 
   </Card>
   </Col>
@@ -31,8 +31,8 @@ function Category() {
                   borderRadius: '50%',width:'9rem', // Make the image completely circular
                   height: '10rem' // Explicit height to match width
                 }}/>
-     <Card.Body>
-      <Card.Title>Sarees</Card.Title>
+     <Card.Body className='cat'>
+      <Card.Title className='cat'>Sarees</Card.Title>
     </Card.Body> 
   </Card>
   </Col>
@@ -42,8 +42,8 @@ function Category() {
                   borderRadius: '50%',width:'9rem', // Make the image completely circular
                   height: '10rem' // Explicit height to match width
                 }} />
-     <Card.Body>
-      <Card.Title>Kurta Material</Card.Title>
+     <Card.Body className='cat'>
+      <Card.Title className='cat'>Kurta Material</Card.Title>
     </Card.Body> 
   </Card>
   </Col>
@@ -53,8 +53,8 @@ function Category() {
                   borderRadius: '50%',width:'9rem', // Make the image completely circular
                   height: '10rem' // Explicit height to match width
                 }} />
-     <Card.Body>
-      <Card.Title>kurta</Card.Title>
+     <Card.Body className='cat'>
+      <Card.Title className='cat'>kurta</Card.Title>
     </Card.Body> 
   </Card>
   </Col>
@@ -64,8 +64,8 @@ function Category() {
                   borderRadius: '50%',width:'9rem', // Make the image completely circular
                   height: '10rem' // Explicit height to match width
                 }} />
-     <Card.Body>
-      <Card.Title>Churidar</Card.Title>
+     <Card.Body className='cat'>
+      <Card.Title className='cat'>Churidar</Card.Title>
     </Card.Body> 
   </Card>
   </Col>
@@ -75,8 +75,8 @@ function Category() {
                   borderRadius: '50%',width:'9rem', // Make the image completely circular
                   height: '10rem' // Explicit height to match width
                 }} />
-     <Card.Body>
-      <Card.Title>Churidar</Card.Title>
+     <Card.Body className='cat'>
+      <Card.Title className='cat'>Churidar</Card.Title>
     </Card.Body> 
   </Card>
   </Col>

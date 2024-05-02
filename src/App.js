@@ -16,7 +16,7 @@ const SimpleAnimation = () => {
       <Navbar/>
       <Banner/>
      <Bestsell/>
-     <Category/>
+     <Category />
      <Offers/>
         <Dilfooter/>
     </div>

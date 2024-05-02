@@ -1,6 +1,10 @@
+ *{
+    background-color: black;}
+
 #page1 {
   width: 100%;
   height: 200vh; /* Extend to allow for scrolling */
+  background-color: black;
 }
 
 #nav {
@@ -32,15 +36,14 @@
 .banner {
   position: fixed;
   width: 100%;
-  height: 100%; /* Default banner height */
+  height: 50px; /* Default banner height */
   text-align: center;
   background-color: #f0f0f0; /* Default background color */
 }
 
 .banner-img {
   width: 100%; /* Ensure the image fills the banner */
-  height: 100%; /* Maintain the height */
-  object-fit: cover; /* Adjust the aspect ratio to fit the banner */
+  height: 750px; /* Maintain the height */
 }
 
 /* CSS transition for image scaling */
