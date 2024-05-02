@@ -66,6 +66,18 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
           </a>
         </h6>
       </MDBCol>
+      <MDBCol md="9" lg="8" xl="9" className='mb-4'>
+              {/* Include Google Maps iframe here */}
+              <iframe
+                title="dil_Hak,kannur, Kerala Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15667.408451487437!2d75.36787942368805!3d11.86431714468129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba45f6ee8c7f8d5%3A0xf91b1ea6b172b5d0!2sKannur%20New%20Bus%20Stand!5e0!3m2!1sen!2sin!4v1649292830951!5m2!1sen!2sin"
+                width="50%"
+                height="200"
+                style={{ border: 0 }}
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </MDBCol>
     </MDBRow>
   </MDBContainer>
 </section>
