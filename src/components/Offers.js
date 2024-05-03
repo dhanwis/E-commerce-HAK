@@ -22,6 +22,9 @@ function Offers() {
       case 3:
         navigate('/Bansarees');
         break;
+        case 4:
+        navigate('/Csaree');
+        break;
       default:
         navigate('/'); // Default navigation
     }
@@ -58,6 +61,7 @@ function Offers() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      
     </Container>
   );
 }
