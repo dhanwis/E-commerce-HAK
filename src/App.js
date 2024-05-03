@@ -9,7 +9,7 @@ import Offers from './components/Offers';
 import Dilfooter from './components/Dilfooter';
 import Bansarees from './components/Bansarees';
 import Csaree from './components/Csaree';
-
+import Bannerdetails from './components/Bannerdetails';
 
 // The main content of the homepage
 const SimpleAnimation = () => {
@@ -33,7 +33,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<SimpleAnimation />} /> {/* Home route */}
         <Route path="/Bansarees" element={<Bansarees/>} /> {/* Page for slide 1 in Offers */}
-        
+        <Route path="/Csaree" element={<Csaree/>} />
+        <Route path="/Bannerdetails" element={<Bannerdetails/>} />
         {/* Add more routes as needed */}
       </Routes>
         {/* <Dilfooter />  */}
