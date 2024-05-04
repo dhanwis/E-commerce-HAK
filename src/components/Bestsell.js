@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import './Bestsell.css'; 
+import './Bestsell.css';
 import banner from '../images/b1.avif';
-import banner2 from '../images/b1.avif'
+import { Link } from 'react-router-dom';
 
 const ProductGallery = () => {
   const bestsellers = [
     { id: 1, name: 'Bestseller 1', imageUrl: banner },
-    { id: 2, name: 'Bestseller 2', imageUrl: banner2 },
+    { id: 2, name: 'Bestseller 2', imageUrl: banner },
     { id: 3, name: 'Bestseller 3', imageUrl: banner },
     { id: 4, name: 'Bestseller 1', imageUrl: banner },
     { id: 5, name: 'Bestseller 2', imageUrl: banner },
-    { id: 6, name: 'Bestseller 3', imageUrl: banner},
+    { id: 6, name: 'Bestseller 3', imageUrl: banner },
     { id: 7, name: 'Bestseller 1', imageUrl: banner },
     { id: 8, name: 'Bestseller 2', imageUrl: banner },
     { id: 9, name: 'Bestseller 3', imageUrl: banner },
@@ -24,11 +24,11 @@ const ProductGallery = () => {
 
   const featuredProducts = [
     { id: 1, name: 'Featured 1', imageUrl: banner },
-    { id: 2, name: 'Featured 2', imageUrl: banner},
-    { id: 3, name: 'Featured 3', imageUrl: banner},
+    { id: 2, name: 'Featured 2', imageUrl: banner },
+    { id: 3, name: 'Featured 3', imageUrl: banner },
     { id: 4, name: 'Featured 1', imageUrl: banner },
-    { id: 5, name: 'Featured 2', imageUrl: banner},
-    { id: 6, name: 'Featured 3', imageUrl: banner},
+    { id: 5, name: 'Featured 2', imageUrl: banner },
+    { id: 6, name: 'Featured 3', imageUrl: banner },
   ];
 
   const [selectedOption, setSelectedOption] = useState('bestsellers');
@@ -38,13 +38,15 @@ const ProductGallery = () => {
       <div className="row">
         {products.map(product => (
           <div className="col-md-4 mb-4" key={product.id}>
-            <div className="card">
-              <img src={product.imageUrl} className="card-img-top" alt={product.name} />
-              <div className="card-body">
-                <h5 className="card-title">{product.name}</h5>
-                <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <Link to={`/product/${product.id}`} className="card-link">
+              <div className="card">
+                <img src={product.imageUrl} className="card-img-top" alt={product.name} />
+                <div className="card-body">
+                  <h5 className="card-title">{product.name}</h5>
+                  <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </div>

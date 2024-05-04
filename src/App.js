@@ -10,6 +10,7 @@ import Dilfooter from './components/Dilfooter';
 import Bansarees from './components/Bansarees';
 import Csaree from './components/Csaree';
 import Bannerdetails from './components/Bannerdetails';
+import ProductDetails from './components/ProductDetails';
 
 // The main content of the homepage
 const SimpleAnimation = () => {
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/Bansarees" element={<Bansarees/>} /> {/* Page for slide 1 in Offers */}
         <Route path="/Csaree" element={<Csaree/>} />
         <Route path="/Bannerdetails" element={<Bannerdetails/>} />
+        <Route path="/product/:id" element={<ProductDetails/>} />
         {/* Add more routes as needed */}
       </Routes>
         {/* <Dilfooter />  */}
