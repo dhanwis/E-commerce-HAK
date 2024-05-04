@@ -5,6 +5,10 @@ import b1 from '../images/red.avif';
 import b2 from '../images/blue.avif';
 import b3 from '../images/black.avif';
 import b4 from '../images/green.jpg';
+import b5 from '../images/blue.jpg';
+import b6 from '../images/red.webp';
+import b7 from '../images/black.webp';
+import b8 from '../images/green.jpeg';
 
 // Example data with additional metrics for sorting
 const initialCardData = [
@@ -42,6 +46,43 @@ const initialCardData = [
     size: 'Extra Large',
     color: 'Green',
     price: 1000,
+    popularity: 300,
+  },
+ 
+  {
+    title: 'Saree 5',
+    description: 'Elegant saree for special occasions.',
+    image: b5,
+    size: 'Medium',
+    color: 'Blue',
+    price: 990,
+    popularity: 200,
+  },
+  {
+    title: 'Saree 6',
+    description: 'Beautiful saree with intricate designs.',
+    image: b6,
+    size: 'Small',
+    color: 'Red',
+    price: 690,
+    popularity: 500,
+  },
+  {
+    title: 'Saree 7',
+    description: 'Classic black saree.',
+    image: b7,
+    size: 'Large',
+    color: 'Black',
+    price: 5090,
+    popularity: 800,
+  },
+  {
+    title: 'Saree 8',
+    description: 'Elegant green saree.',
+    image: b8,
+    size: 'Extra Large',
+    color: 'Green',
+    price: 10000,
     popularity: 300,
   },
 ];
@@ -132,7 +173,7 @@ const Bansarees = () => {
       <Row>
         {filteredData.map((card, index) => (
           <Col xs={12} sm={6} md={3} key={index}> {/* Responsive layout */}
-            <Card style={{ width: '590px', marginBottom: '20px' }}> {/* Consistent card width */}
+            <Card style={{ width: '400px', marginBottom: '20px' }}> {/* Consistent card width */}
               <Card.Img variant="top" src={card.image} />
               <Card.Body>
                 <Card.Title>{card.title}</Card.Title>
