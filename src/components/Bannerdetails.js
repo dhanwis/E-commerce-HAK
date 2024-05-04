@@ -5,7 +5,6 @@ import './Bannerdetails.css';
 import b1 from '../components/b1.jpeg';
 import Dilfooter from './Dilfooter';
 
-// Dummy data for clothing items
 const clothingData = [
   {
     id: 1,

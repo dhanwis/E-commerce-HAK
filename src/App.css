@@ -23,12 +23,26 @@
   margin-left: -10px;
 }
 
+.navcon1 {
+  margin-left: -10px;
+}
+
 .dillogo {
   margin-left: 150px;
   margin-top: 2rem;
 }
 
+.dillogo1 {
+  margin-left: 150px;
+  margin-top: 2rem;
+}
+
 .navcontent {
+  gap: 20px;
+  display: flex;
+}
+
+.navcontent1 {
   gap: 20px;
   display: flex;
 }
