@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'; // Import for navigation
 import './Category.css'; // Import your custom CSS file (optional)
 import k4 from '../images/k4.webp';
 
+
 function Category() {
   const categoryItems = [
     { name: 'Sarees', path: '/Csaree' },
@@ -21,11 +22,11 @@ function Category() {
   return (
     <Container>
       <h4 className='ctitle'>Category</h4>
-      <Row className='scroll-row'>
+      <Row   className='scroll-row'>
         {categoryItems.map((item) => (
-          <Col key={item.name}>
+          <Col key={item.name} >
             <Link to={item.path} style={{textDecoration:'none'}}>
-              <Card className='cbackground' style={{ width: '9rem' }}>
+              <Card data-aos="fade-right" className='cbackground' style={{ width: '9rem' }}>
                 <Card.Img
                   className='category'
                   variant="top"
@@ -36,7 +37,7 @@ function Category() {
                     height: '10rem', // Explicit height to match width
                   }}
                 />
-                <Card.Body className='cat'>
+                <Card.Body data-aos="fade-up" className='cat'>
                   <Card.Title className='cat'>{item.name}</Card.Title>
                 </Card.Body>
               </Card>

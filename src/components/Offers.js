@@ -31,34 +31,26 @@ function Offers() {
   };
 
   return (
-    <Container style={{ marginBottom: '20px', backgroundColor: 'black' }}>
+    <Container fluid style={{ marginBottom: '20px', backgroundColor: 'black' ,width:'100%'}}>
       <Carousel>
         <Carousel.Item onClick={() => handleCarouselClick(0)}> {/* Add click event */}
-          <img src={b4} alt='First slide' />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-          </Carousel.Caption>
+          <img  style={{ width:'1800px'}} src={b4} alt='First slide' />
+          
         </Carousel.Item>
 
         <Carousel.Item onClick={() => handleCarouselClick(1)}> {/* Add click event */}
-          <img src={b4} alt='Second slide' />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-          </Carousel.Caption>
+          <img style={{ width:'1800px'}} src={b4} alt='Second slide' />
+         
         </Carousel.Item>
 
         <Carousel.Item onClick={() => handleCarouselClick(2)}> {/* Add click event */}
-          <img src={b4} alt='Third slide' />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-          </Carousel.Caption>
+          <img  style={{ width:'1800px'}} src={b4} alt='Third slide' />
+          
         </Carousel.Item>
 
         <Carousel.Item onClick={() => handleCarouselClick(3)}> {/* Add click event */}
-          <img src={b4} alt='Fourth slide' />
-          <Carousel.Caption>
-            <h3>Fourth slide label</h3>
-          </Carousel.Caption>
+          <img style={{ width:'1800px'}} src={b4} alt='Fourth slide' />
+          
         </Carousel.Item>
       </Carousel>
       
