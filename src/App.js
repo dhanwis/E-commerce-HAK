@@ -9,8 +9,13 @@ import Offers from './components/Offers';
 import Dilfooter from './components/Dilfooter';
 import Bansarees from './components/Bansarees';
 import Csaree from './components/Csaree';
+import Ckurthaset from './components/Ckurthaset';
+import Cchuridarmaterial from './components/Cchuridarmaterial';
+import Ckurta from './components/Ckurta';
+import Cchuridar from './components/Cchuridar';
 import Bannerdetails from './components/Bannerdetails';
 import ProductDetails from './components/ProductDetails';
+import ProductDescription from './components/ProductDescription'; // Create this component
 
 // The main content of the homepage
 const SimpleAnimation = () => {
@@ -35,8 +40,14 @@ const App = () => {
         <Route path="/" element={<SimpleAnimation />} /> {/* Home route */}
         <Route path="/Bansarees" element={<Bansarees/>} /> {/* Page for slide 1 in Offers */}
         <Route path="/Csaree" element={<Csaree/>} />
+        <Route path="/Ckurthaset" element={<Ckurthaset/>} />
+        <Route path="/Cchuridarmaterial" element={<Cchuridarmaterial/>} />
+        <Route path="/Cchuridar" element={<Cchuridar/>} />
+        <Route path="/Ckurta" element={<Ckurta/>} />
         <Route path="/Bannerdetails" element={<Bannerdetails/>} />
         <Route path="/product/:id" element={<ProductDetails/>} />
+        <Route path="/sarees/:Id" element={<ProductDescription />} /> 
+
         {/* Add more routes as needed */}
       </Routes>
         {/* <Dilfooter />  */}

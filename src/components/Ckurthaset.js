@@ -1,173 +1,173 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Card, Button } from 'react-bootstrap';
 import Dilfooter from './Dilfooter';
-import s1 from '../images/s1.webp';
-import s2 from '../images/s2.avif';
-import s3 from '../images/s3.jpg';
-import s4 from '../images/s4.avif';
-import s5 from '../images/s5.avif';
-import s11 from '../images/s11.avif';
-import s12 from '../images/s12.avif';
-import s13 from '../images/s13.webp';
-import s14 from '../images/s14.jpg';
-import s15 from '../images/s15.jpg';
-import s6 from '../images/s6.webp';
-import s7 from '../images/s7.webp';
-import s8 from '../images/s8.webp';
-import s9 from '../images/s9.webp';
-import s10 from '../images/s10.jpg';
-import s16 from '../images/s16.jpg';
+import k1 from '../images/k1.jpg';
+import k2 from '../images/k2.jpg';
+import k3 from '../images/k3.jpg';
+import k5 from '../images/k5.webp';
+import k6 from '../images/k6.avif';
+import k7 from '../images/k7.webp';
+import k8 from '../images/k8.webp';
+import k9 from '../images/k9.webp';
+import k10 from '../images/k10.avif';
+import k11 from '../images/k11.jpg';
+import k12 from '../images/k12.jpg';
+import k13 from '../images/k13.jpg';
+import k14 from '../images/k14.jpg';
+import k15 from '../images/k15.webp';
+import k16 from '../images/k16.webp';
+import k17 from '../images/k17.jpg';
 
 // Example data with additional metrics for sorting
 const initialCardData = [
   {
     title: '$600',
-    description: 'Beautiful saree with intricate designs.',
-    image: s1,
+    description: 'Beautiful pink kurtha.',
+    image: k1,
     size: 'Small',
-    color: 'Red',
+    color: 'Pink',
     price: 600,
     popularity: 500,
   },
   {
-    title: '&900',
-    description: 'Elegant saree for special occasions.',
-    image: s2,
+    title: '&350',
+    description: 'blue kurtha.',
+    image: k2,
     size: 'Medium',
     color: 'Blue',
-    price: 900,
+    price: 350,
     popularity: 200,
   },
   {
-    title: '$500',
-    description: 'Classic black saree.',
-    image: s13,
+    title: '$499',
+    description: 'Classic pink kurtha.',
+    image: k3,
     size: 'Large',
-    color: 'Black',
-    price: 500,
+    color: 'Pink',
+    price: 499,
     popularity: 800,
   },
   {
-    title: '$1000',
-    description: 'Elegant green saree.',
-    image: s14,
+    title: '$999',
+    description: 'Elegant white kurtha.',
+    image: k5,
     size: 'Extra Large',
-    color: 'Green',
-    price: 1000,
+    color: 'White',
+    price: 999,
     popularity: 300,
   },
  
   {
-    title: '$990',
-    description: 'Elegant saree for special occasions.',
-    image: s15,
+    title: '$490',
+    description: 'Elegant silver kurtha for special occasions.',
+    image: k6,
     size: 'Medium',
-    color: 'Blue',
-    price: 990,
+    color: 'Silver',
+    price: 490,
     popularity: 200,
   },
   {
     title: '$690',
-    description: 'Beautiful saree with intricate designs.',
-    image: s6,
+    description: 'Beautiful ash color kurtha.',
+    image: k7,
     size: 'Small',
-    color: 'Yellow',
+    color: 'Ash',
     price: 690,
     popularity: 500,
   },
   {
-    title: '$5090',
-    description: 'Classic black saree.',
-    image: s7,
+    title: '$509',
+    description: 'Classic red kurtha.',
+    image: k8,
     size: 'Large',
-    color: 'Black',
-    price: 5090,
+    color: 'Red',
+    price: 509,
     popularity: 800,
   },
   {
-    title: '$10000',
-    description: 'Elegant green saree.',
-    image: s16,
+    title: '$699',
+    description: 'Elegant grey kurtha.',
+    image: k9,
     size: 'Extra Large',
-    color: 'Red',
-    price: 10000,
+    color: 'Grey',
+    price: 699,
     popularity: 300,
   },
   {
-    title: '$4999',
-    description: 'Elegant green and pink saree.',
-    image: s3,
+    title: '$499',
+    description: 'Elegant purple kurtha.',
+    image: k10,
     size: 'Extra Large',
-    color: 'Pink',
-    price: 4999,
-    popularity: 400,
-  },
-  {
-    title: '$3599',
-    description: 'Elegant green and orange saree.',
-    image: s4,
-    size: 'Large',
-    color: 'Orange',
-    price: 3599,
-    popularity: 500,
-  },
-  {
-    title: '$4699',
-    description: 'Elegant blue saree.',
-    image: s8,
-    size: 'Large',
-    color: 'Blue',
-    price: 4699,
-    popularity: 500,
-  },
-  {
-    title: '$7999',
-    description: 'Elegant yellow saree.',
-    image: s9,
-    size: 'Small',
-    color: 'Yellow',
-    price: 7999,
-    popularity: 800,
-  },
-  {
-    title: '$9999',
-    description: 'Elegant yellow saree.',
-    image: s10,
-    size: 'Small',
-    color: 'Yellow',
-    price: 9999,
-    popularity: 800,
-  },
-  {
-    title: '$8999',
-    description: 'Elegant purple saree.',
-    image: s12,
-    size: 'Small',
     color: 'Purple',
-    price: 8999,
+    price: 499,
     popularity: 400,
   },
   {
-    title: '$2599',
-    description: 'Elegant white saree.',
-    image: s5,
+    title: '$359',
+    description: 'Black kurtha.',
+    image: k11,
+    size: 'Large',
+    color: 'Black',
+    price: 359,
+    popularity: 500,
+  },
+  {
+    title: '$899',
+    description: 'Red kurtha.',
+    image: k12,
+    size: 'Large',
+    color: 'Red',
+    price: 899,
+    popularity: 500,
+  },
+  {
+    title: '$799',
+    description: 'Elegant yellow kurtha.',
+    image: k13,
+    size: 'Small',
+    color: 'Yellow',
+    price: 799,
+    popularity: 800,
+  },
+  {
+    title: '$999',
+    description: 'Elegant Ash kurtha.',
+    image: k14,
+    size: 'Small',
+    color: 'Ash',
+    price: 999,
+    popularity: 800,
+  },
+  {
+    title: '$899',
+    description: 'Elegant blue kurtha.',
+    image: k15,
+    size: 'Small',
+    color: 'Blue',
+    price: 899,
+    popularity: 400,
+  },
+  {
+    title: '$259',
+    description: 'Elegant white kurtha.',
+    image: k16,
     size: 'Small',
     color: 'White',
-    price: 2599,
+    price: 259,
     popularity: 200,
   },
   {
-    title: '$3499',
-    description: 'Elegant white saree.',
-    image: s11,
+    title: '$349',
+    description: 'Elegant red kurtha.',
+    image: k17,
     size: 'Small',
-    color: 'White',
-    price: 3499,
+    color: 'Red',
+    price: 349,
     popularity: 200,
   },
 ];
 
-const Csaree = () => {
+const Ckurthaset = () => {
   const [filteredData, setFilteredData] = useState(initialCardData);
 
   const handleFilterChange = (filters) => {
@@ -233,9 +233,11 @@ const Csaree = () => {
                     <option value="Green">Green</option>
                     <option value="Black">Black</option>
                     <option value="White">White</option>
+                    <option value="Ash">Ash</option>
+                    <option value="Grey">Grey</option>
                     <option value="Purple">Purple</option>
                     <option value="Yellow">Yellow</option>
-                    <option value="Orange">Orange</option>
+                    <option value="Silver">Silver</option>
                     <option value="Pink">Pink</option>
                     </Form.Control>
             <Form.Label style={{color: 'pink',marginRight: '8px' ,marginLeft:'8px',marginTop:'7px'}}>Sort By</Form.Label>
@@ -278,5 +280,4 @@ const Csaree = () => {
   );
 };
 
-export default Csaree;
-
+export default Ckurthaset;

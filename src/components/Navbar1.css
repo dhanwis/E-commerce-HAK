@@ -1,0 +1,155 @@
+/* Navbar styles */
+#nav1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px; /* Set a fixed height for the navbar */
+    cursor: pointer;
+    color: #d10a8f;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  /* Dillogo styles */
+  .dillogo1 {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+  }
+  
+  /* Contact and Search styles */
+  .navcon1 h4 {
+    margin-left: 20px;
+  }
+  
+  .navcon1,
+  .navcontent1 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navcontent1 {
+    margin-right: 10px;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%; /* Adjust the width of the sidebar for responsiveness */
+    height: 100%;
+    background-color: rgb(253, 168, 208);
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .close-sidebar {
+    background: none;
+    float: right;
+    border: none;
+    color: #333;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: right;
+  }
+  
+  /* Top slidebar styles */
+  .top-slidebar {
+    position: fixed;
+    top: 5px;
+    left: 60%; /* Adjust the left position for responsiveness */
+    width: 20%; /* Adjust the width of the top slidebar for responsiveness */
+    height: 60px;
+    padding: 10px;
+    border-radius: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .search-bar {
+    flex: 1;
+    border: 1px solid rgb(250, 43, 140);
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Login panel styles */
+  .login-panel {
+    cursor: pointer;
+    position: fixed;
+    right: 1rem; /* Adjust the right margin for responsiveness */
+    margin-top: -200px; /* Adjust the top margin for responsiveness */
+    height: 70%; /* Set a height for the login panel */
+    bottom: 50px;
+    width: 40%; /* Adjust the width of the login panel for responsiveness */
+    justify-content: space-between;
+    background-color: black;
+    padding-top: 250px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-size: 25px;
+    border-radius: 50px;
+  }
+  
+  .login-form {
+    margin-bottom: 30px;
+  }
+  
+  .login-input {
+    padding: 8px;
+    width: 90%;
+    margin-bottom: 20px;
+    border: 1px solid rgb(250, 43, 140);
+    border-radius: 5px;
+  }
+  
+  .send-otp-btn {
+    padding: 8px;
+    background-color: rgb(250, 43, 140);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .send-otp-btn:hover {
+    background-color: #fd8aee;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    /* Adjust dillogo margin for smaller screens */
+    .dillogo {
+      margin-left: 10px;
+    }
+  
+    /* Adjust margin for contact and search */
+    .navcon h4 {
+      margin-left: 5px;
+    }
+    .navcontent {
+      margin-top: 10px;
+      margin-left: -400px;
+    }
+  
+    .top-slidebar {
+      left: 30%;
+      width: 30%;
+    }
+  
+    /* Adjust width and right margin of login panel */
+    .login-panel {
+      margin-right: 150px;
+      width: 60%;
+    }
+  
+    /* Display search and login in the same line with space in between */
+    .navcontent h4 {
+      margin-left: 10px; /* Add space between elements */
+    }
+  }
+  
