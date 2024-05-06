@@ -20,5 +20,6 @@
   }
   .card-body,.card-title,.card-text{
     background-color: white;
-    
+    text-decoration: none;
   }
+
