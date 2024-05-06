@@ -11,10 +11,10 @@ import k4 from '../images/k4.webp';
 function Category() {
   const categoryItems = [
     { name: 'Sarees', path: '/Csaree' },
-    { name: 'Kurta Set', path: '/kurta-set' },
-    { name: 'Kurta Material', path: '/kurta-material' },
-    { name: 'Kurta', path: '/kurta' },
-    { name: 'Churidar', path: '/churidar' },
+    { name: 'KurthaSet', path: '/Ckurthaset' },
+    { name: 'Churidar Material', path: '/Cchuridarmaterial' },
+    { name: 'Kurta', path: '/Ckurta' },
+    { name: 'Churidar', path: '/Cchuridar' },
     // Add more category items here as needed
   ];
 

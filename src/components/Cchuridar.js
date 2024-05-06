@@ -1,173 +1,173 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Card, Button } from 'react-bootstrap';
 import Dilfooter from './Dilfooter';
-import s1 from '../images/s1.webp';
-import s2 from '../images/s2.avif';
-import s3 from '../images/s3.jpg';
-import s4 from '../images/s4.avif';
-import s5 from '../images/s5.avif';
-import s11 from '../images/s11.avif';
-import s12 from '../images/s12.avif';
-import s13 from '../images/s13.webp';
-import s14 from '../images/s14.jpg';
-import s15 from '../images/s15.jpg';
-import s6 from '../images/s6.webp';
-import s7 from '../images/s7.webp';
-import s8 from '../images/s8.webp';
-import s9 from '../images/s9.webp';
-import s10 from '../images/s10.jpg';
-import s16 from '../images/s16.jpg';
+import p1r from '../images/p1r.jpg';
+import p2b from '../images/p2b.jpg';
+import p3g from '../images/p3g.jpg';
+import p4y from '../images/p4y.webp';
+import p5v from '../images/p5v.webp';
+import p6pu from '../images/p6pu.webp';
+import p7g from '../images/p7g.jpeg';
+import p8p from '../images/p8p.jpg';
+import p9bl from '../images/p9bl.avif';
+import p10y from '../images/p10y.webp';
+import p11r from '../images/p11r.webp';
+import p12o from '../images/p12o.jpg';
+import p13b from '../images/p13b.avif';
+import p14w from '../images/p14w.jpg';
+import p15v from '../images/p15v.jpg';
+import p16bl from '../images/p16bl.jpg';
 
 // Example data with additional metrics for sorting
 const initialCardData = [
   {
     title: '$600',
-    description: 'Beautiful saree with intricate designs.',
-    image: s1,
+    description: 'Beautiful red churidar .',
+    image: p1r,
     size: 'Small',
     color: 'Red',
     price: 600,
     popularity: 500,
   },
   {
-    title: '&900',
-    description: 'Elegant saree for special occasions.',
-    image: s2,
+    title: '&350',
+    description: 'blue churidar.',
+    image: p2b,
     size: 'Medium',
     color: 'Blue',
-    price: 900,
+    price: 350,
     popularity: 200,
   },
   {
-    title: '$500',
-    description: 'Classic black saree.',
-    image: s13,
+    title: '$499',
+    description: 'Classic green churidar.',
+    image: p3g,
     size: 'Large',
-    color: 'Black',
-    price: 500,
+    color: 'Green',
+    price: 499,
     popularity: 800,
   },
   {
-    title: '$1000',
-    description: 'Elegant green saree.',
-    image: s14,
+    title: '$999',
+    description: 'Elegant yellow churidar.',
+    image: p4y,
     size: 'Extra Large',
-    color: 'Green',
-    price: 1000,
+    color: 'Yellow',
+    price: 999,
     popularity: 300,
   },
  
   {
-    title: '$990',
-    description: 'Elegant saree for special occasions.',
-    image: s15,
+    title: '$490',
+    description: 'Elegant violet churidar for special occasions.',
+    image: p5v,
     size: 'Medium',
-    color: 'Blue',
-    price: 990,
+    color: 'Violet',
+    price: 490,
     popularity: 200,
   },
   {
     title: '$690',
-    description: 'Beautiful saree with intricate designs.',
-    image: s6,
+    description: 'Beautiful purple salwar.',
+    image: p6pu,
     size: 'Small',
-    color: 'Yellow',
+    color: 'Purple',
     price: 690,
     popularity: 500,
   },
   {
-    title: '$5090',
-    description: 'Classic black saree.',
-    image: s7,
+    title: '$509',
+    description: 'Classic green churidar.',
+    image: p7g,
     size: 'Large',
-    color: 'Black',
-    price: 5090,
+    color: 'Green',
+    price: 509,
     popularity: 800,
   },
   {
-    title: '$10000',
-    description: 'Elegant green saree.',
-    image: s16,
+    title: '$699',
+    description: 'Elegant pink salwar.',
+    image: p8p,
     size: 'Extra Large',
-    color: 'Red',
-    price: 10000,
+    color: 'Pink',
+    price: 699,
     popularity: 300,
   },
   {
-    title: '$4999',
-    description: 'Elegant green and pink saree.',
-    image: s3,
+    title: '$499',
+    description: 'Elegant black churidar.',
+    image: p9bl,
     size: 'Extra Large',
-    color: 'Pink',
-    price: 4999,
+    color: 'Black',
+    price: 499,
     popularity: 400,
   },
   {
-    title: '$3599',
-    description: 'Elegant green and orange saree.',
-    image: s4,
+    title: '$359',
+    description: 'Yellow salwar.',
+    image: p10y,
     size: 'Large',
+    color: 'Yellow',
+    price: 359,
+    popularity: 500,
+  },
+  {
+    title: '$899',
+    description: 'Red churidar.',
+    image: p11r,
+    size: 'Large',
+    color: 'Red',
+    price: 899,
+    popularity: 500,
+  },
+  {
+    title: '$799',
+    description: 'Elegant orange salwar.',
+    image: p12o,
+    size: 'Small',
     color: 'Orange',
-    price: 3599,
-    popularity: 500,
+    price: 799,
+    popularity: 800,
   },
   {
-    title: '$4699',
-    description: 'Elegant blue saree.',
-    image: s8,
-    size: 'Large',
+    title: '$999',
+    description: 'Elegant blue salwar.',
+    image: p13b,
+    size: 'Small',
     color: 'Blue',
-    price: 4699,
-    popularity: 500,
-  },
-  {
-    title: '$7999',
-    description: 'Elegant yellow saree.',
-    image: s9,
-    size: 'Small',
-    color: 'Yellow',
-    price: 7999,
+    price: 999,
     popularity: 800,
   },
   {
-    title: '$9999',
-    description: 'Elegant yellow saree.',
-    image: s10,
-    size: 'Small',
-    color: 'Yellow',
-    price: 9999,
-    popularity: 800,
-  },
-  {
-    title: '$8999',
-    description: 'Elegant purple saree.',
-    image: s12,
-    size: 'Small',
-    color: 'Purple',
-    price: 8999,
-    popularity: 400,
-  },
-  {
-    title: '$2599',
-    description: 'Elegant white saree.',
-    image: s5,
+    title: '$899',
+    description: 'Elegant white churidar.',
+    image: p14w,
     size: 'Small',
     color: 'White',
-    price: 2599,
+    price: 899,
+    popularity: 400,
+  },
+  {
+    title: '$259',
+    description: 'Elegant violet salwar.',
+    image: p15v,
+    size: 'Small',
+    color: 'Violet',
+    price: 259,
     popularity: 200,
   },
   {
-    title: '$3499',
-    description: 'Elegant white saree.',
-    image: s11,
+    title: '$349',
+    description: 'Elegant black salwar.',
+    image: p16bl,
     size: 'Small',
-    color: 'White',
-    price: 3499,
+    color: 'Black',
+    price: 349,
     popularity: 200,
   },
 ];
 
-const Csaree = () => {
+const Cchuridar = () => {
   const [filteredData, setFilteredData] = useState(initialCardData);
 
   const handleFilterChange = (filters) => {
@@ -232,11 +232,11 @@ const Csaree = () => {
                     <option value="Blue">Blue</option>
                     <option value="Green">Green</option>
                     <option value="Black">Black</option>
+                    <option value="Pink">Pink</option>
+                    <option value="Yellow">Yellow</option>
                     <option value="White">White</option>
                     <option value="Purple">Purple</option>
-                    <option value="Yellow">Yellow</option>
-                    <option value="Orange">Orange</option>
-                    <option value="Pink">Pink</option>
+                    <option value="Violet">Violet</option>
                     </Form.Control>
             <Form.Label style={{color: 'pink',marginRight: '8px' ,marginLeft:'8px',marginTop:'7px'}}>Sort By</Form.Label>
             <Form.Control
@@ -260,7 +260,7 @@ const Csaree = () => {
         {filteredData.map((card, index) => (
           <Col xs={12} sm={6} md={3} key={index}> {/* Responsive layout */}
             <Card style={{ width: '400px', marginBottom: '20px' }}> {/* Consistent card width */}
-              <Card.Img variant="top" src={card.image} style={{ width: '100%', height: '600px' }} /> {/* Set image size */} 
+              <Card.Img variant="top" src={card.image} style={{ width: '100%', height: '500px' }} /> {/* Set image size */}
               <Card.Body>
                 <Card.Title>{card.title}</Card.Title>
                 <Card.Text>{card.description}</Card.Text>
@@ -278,5 +278,4 @@ const Csaree = () => {
   );
 };
 
-export default Csaree;
-
+export default Cchuridar;
