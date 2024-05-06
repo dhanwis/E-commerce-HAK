@@ -15,6 +15,7 @@ import Ckurta from './components/Ckurta';
 import Cchuridar from './components/Cchuridar';
 import Bannerdetails from './components/Bannerdetails';
 import ProductDetails from './components/ProductDetails';
+import ProductDescription from './components/ProductDescription'; // Create this component
 
 // The main content of the homepage
 const SimpleAnimation = () => {
@@ -45,6 +46,8 @@ const App = () => {
         <Route path="/Ckurta" element={<Ckurta/>} />
         <Route path="/Bannerdetails" element={<Bannerdetails/>} />
         <Route path="/product/:id" element={<ProductDetails/>} />
+        <Route path="/sarees/:Id" element={<ProductDescription />} /> 
+
         {/* Add more routes as needed */}
       </Routes>
         {/* <Dilfooter />  */}
