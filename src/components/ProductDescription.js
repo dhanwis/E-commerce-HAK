@@ -11,7 +11,9 @@ import b5 from '../images/blue.jpg';
 import b6 from '../images/red.webp';
 import b7 from '../images/black.webp';
 import b8 from '../images/green.jpeg';
+
 import Dilfooter from './Dilfooter';
+import Navbar1 from './Navbar1';
 
 // Placeholder data array with unique IDs for navigation
 const sarees = [
@@ -109,6 +111,8 @@ const ProductDescription = () => {
   }
 
   return (
+    <div>
+      <Navbar1/>
     <Container fluid style={{paddingTop:'300px',paddingBottom:'30px'}}>
       <Row>
         <Col md={6}>
@@ -134,8 +138,9 @@ const ProductDescription = () => {
           </Card>
         </Col>
       </Row>
-      <Dilfooter/>
     </Container>
+    <Dilfooter/>
+    </div>
   );
 };
 

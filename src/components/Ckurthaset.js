@@ -17,6 +17,7 @@ import k14 from '../images/k14.jpg';
 import k15 from '../images/k15.webp';
 import k16 from '../images/k16.webp';
 import k17 from '../images/k17.jpg';
+import Navbar1 from './Navbar1';
 
 // Example data with additional metrics for sorting
 const initialCardData = [
@@ -207,6 +208,8 @@ const Ckurthaset = () => {
   };
 
   return (
+    <div>
+      <Navbar1/>
     <Container fluid>
       <Row style={{ paddingTop: '205px', justifyContent: 'flex-end' ,paddingBottom:'7px'}}> {/* Right-align the row content */}
         <Col xs={4}>
@@ -275,8 +278,9 @@ const Ckurthaset = () => {
       </Row>
 
       {/* Footer Section */}
-      <Dilfooter />
     </Container>
+    <Dilfooter />
+    </div>
   );
 };
 

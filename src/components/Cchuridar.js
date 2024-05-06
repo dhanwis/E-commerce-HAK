@@ -17,6 +17,7 @@ import p13b from '../images/p13b.avif';
 import p14w from '../images/p14w.jpg';
 import p15v from '../images/p15v.jpg';
 import p16bl from '../images/p16bl.jpg';
+import Navbar1 from './Navbar1';
 
 // Example data with additional metrics for sorting
 const initialCardData = [
@@ -207,6 +208,8 @@ const Cchuridar = () => {
   };
 
   return (
+    <div>
+      <Navbar1/>
     <Container fluid>
       <Row style={{ paddingTop: '205px', justifyContent: 'flex-end' ,paddingBottom:'7px'}}> {/* Right-align the row content */}
         <Col xs={4}>
@@ -273,8 +276,9 @@ const Cchuridar = () => {
       </Row>
 
       {/* Footer Section */}
-      <Dilfooter />
     </Container>
+    <Dilfooter />
+    </div>
   );
 };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
+import Navbar1 from './components/Navbar1';
 import Banner from './components/Banner';
 import Bestsell from './components/Bestsell';
 import Category from './components/Category';
@@ -16,21 +17,12 @@ import Cchuridar from './components/Cchuridar';
 import Bannerdetails from './components/Bannerdetails';
 import ProductDetails from './components/ProductDetails';
 import ProductDescription from './components/ProductDescription'; // Create this component
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
-import { useEffect } from 'react';
 
 // The main content of the homepage
 const SimpleAnimation = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      easing: 'ease-in-out', // Easing function for animations
-    });
-  }, []);
   return (
     <div id="page1">
-      {/* <Navbar /> */}
+      <Navbar />
       <Banner />
       <Bestsell /> {/* Displays bestsellers */}
       <Category /> {/* Some category-based content */}
@@ -44,7 +36,7 @@ const SimpleAnimation = () => {
 const App = () => {
   return (
     <Router>
-       <Navbar /> {/*Common navbar */}
+       {/* <Navbar1 />  */}
       <Routes>
         <Route path="/" element={<SimpleAnimation />} /> {/* Home route */}
         <Route path="/Bansarees" element={<Bansarees/>} /> {/* Page for slide 1 in Offers */}

@@ -1,37 +1,4 @@
-/* Navbar styles */
-#nav1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px; /* Set a fixed height for the navbar */
-    cursor: pointer;
-    color: #d10a8f;
-    position: fixed;
-    width: 100%;
-    z-index: 2;
-  }
-  
-  /* Dillogo styles */
-  .dillogo1 {
-    margin-top: 0.5rem;
-    margin-left: 1rem;
-  }
-  
-  /* Contact and Search styles */
-  .navcon1 h4 {
-    margin-left: 20px;
-  }
-  
-  .navcon1,
-  .navcontent1 {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navcontent1 {
-    margin-right: 10px;
-  }
-  
+
   /* Sidebar styles */
   .sidebar {
     position: fixed;

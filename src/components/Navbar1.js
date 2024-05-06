@@ -66,15 +66,15 @@ function Navbar() {
           alt="Logo" height='100px'
         />
       </div>
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <div className="navcontent1">
-        <h4
+        <h4 className='search'
           onClick={toggleTopSlidebar} 
           style={{ cursor: 'pointer' }}
         >
           SEARCH
         </h4>
-        <h4  onClick={toggleLogin}>
+        <h4 className='login' onClick={toggleLogin}>
           LOGIN
         </h4>
       </div>
@@ -99,6 +99,7 @@ function Navbar() {
             type="text"
             placeholder="Search..."
             className="search-bar"
+            style={{color:'white'}}
           />
         </div>
       )}

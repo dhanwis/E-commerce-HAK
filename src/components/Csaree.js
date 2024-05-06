@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Card, Button } from 'react-bootstrap';
 import Dilfooter from './Dilfooter';
+import Navbar1 from './Navbar1';
 import s1 from '../images/s1.webp';
 import s2 from '../images/s2.avif';
 import s3 from '../images/s3.jpg';
@@ -207,6 +208,8 @@ const Csaree = () => {
   };
 
   return (
+    <div>
+      <Navbar1/>
     <Container fluid>
       <Row style={{ paddingTop: '205px', justifyContent: 'flex-end' ,paddingBottom:'7px'}}> {/* Right-align the row content */}
         <Col xs={4}>
@@ -273,8 +276,9 @@ const Csaree = () => {
       </Row>
 
       {/* Footer Section */}
-      <Dilfooter />
     </Container>
+      <Dilfooter />
+      </div>
   );
 };
 

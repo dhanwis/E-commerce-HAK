@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Card, Button } from 'react-bootstrap';
+import Navbar1 from './Navbar1';
 import Dilfooter from './Dilfooter';
 import { useNavigate } from 'react-router-dom'; // for navigation
 
@@ -146,16 +147,19 @@ const Bansarees = () => {
   };
 
   return (
+    <div>
+      <Navbar1/>
     <Container fluid>
+
       {/* Filter and Sort Controls */}
-      <Row style={{ paddingTop: '205px', justifyContent: 'flex-end', paddingBottom: '7px' }}>
+      <Row style={{ paddingTop: '25px', justifyContent: 'flex-end', paddingBottom: '7px' }}>
         <Col xs={4}>
           <Form.Group style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Form.Label style={{ marginRight: '10px', color: 'pink', marginTop: '7px' }}>Size</Form.Label>
+            <Form.Label style={{ marginRight: '10px', color: 'black', marginTop: '7px' }}>Size</Form.Label>
             <Form.Control
               as="select"
               onChange={(e) => handleFilterChange({ size: e.target.value })}
-              style={{ background: 'none', color: 'pink', width: '100px' }}
+              style={{ background: 'none', color: 'black', width: '100px' }}
             >
               <option value="">All Sizes</option>
               <option value="Small">Small</option>
@@ -164,13 +168,13 @@ const Bansarees = () => {
               <option value="Extra Large">Extra Large</option>
             </Form.Control>
 
-            <Form.Label style={{ color: 'pink', marginRight: '8px', marginLeft: '8px', marginTop: '7px' }}>
+            <Form.Label style={{ color: 'black', marginRight: '8px', marginLeft: '8px', marginTop: '7px' }}>
               Color
             </Form.Label>
             <Form.Control
               as="select"
               onChange={(e) => handleFilterChange({ color: e.target.value })}
-              style={{ background: 'none', color: 'pink', width: '100px' }}
+              style={{ background: 'none', color: 'black', width: '100px' }}
             >
               <option value="">All Colors</option>
               <option value="Red">Red</option>
@@ -180,14 +184,14 @@ const Bansarees = () => {
             </Form.Control>
 
             <Form.Label
-              style={{ color: 'pink', marginRight: '8px', marginLeft: '8px', marginTop: '7px' }}
+              style={{ color: 'black', marginRight: '8px', marginLeft: '8px', marginTop: '7px' }}
             >
               Sort By
             </Form.Label>
             <Form.Control
               as="select"
               onChange={(e) => handleSortChange(e.target.value)}
-              style={{ background: 'none', color: 'pink', width: '100px' }}
+              style={{ background: 'none', color: 'black', width: '100px' }}
             >
               <option value="default">Default</option>
               <option value="price_low_high">Price: Low to High</option>
@@ -217,10 +221,11 @@ const Bansarees = () => {
           </Col>
         ))}
       </Row>
-
+      </Container>
       {/* Footer Section */}
       <Dilfooter />
-    </Container>
+   
+    </div>
   );
 };
 

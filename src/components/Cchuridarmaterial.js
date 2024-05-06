@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Card, Button } from 'react-bootstrap';
 import Dilfooter from './Dilfooter';
+import Navbar1 from './Navbar1';
 import c1b from '../images/c1b.jpg';
 import c2y from '../images/c2y.jpg';
 import c3pu from '../images/c3pu.webp';
@@ -208,6 +209,8 @@ const Cchuridarmaterial = () => {
   };
 
   return (
+    <div>
+      <Navbar1/>
     <Container fluid>
       <Row style={{ paddingTop: '205px', justifyContent: 'flex-end' ,paddingBottom:'7px'}}> {/* Right-align the row content */}
         <Col xs={4}>
@@ -269,8 +272,9 @@ const Cchuridarmaterial = () => {
       </Row>
 
       {/* Footer Section */}
-      <Dilfooter />
     </Container>
+    <Dilfooter />
+    </div>
   );
 };
 

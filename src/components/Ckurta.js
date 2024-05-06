@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Card, Button } from 'react-bootstrap';
 import Dilfooter from './Dilfooter';
+import Navbar1 from './Navbar1';
 import k1bl from '../images/k1bl.webp';
 import k2b from '../images/k2b.jpg';
 import k3r from '../images/k3r.jpeg';
@@ -207,8 +208,10 @@ const Ckurta = () => {
   };
 
   return (
+    <div>
+      <Navbar1/>
     <Container fluid>
-      <Row style={{ paddingTop: '205px', justifyContent: 'flex-end' ,paddingBottom:'7px'}}> {/* Right-align the row content */}
+      <Row style={{ paddingTop: '25px', justifyContent: 'flex-end' ,paddingBottom:'7px'}}> {/* Right-align the row content */}
         <Col xs={4}>
           <Form.Group style={{ display: 'flex', justifyContent: 'flex-end' }}> {/* Align label and control to the right */}
             <Form.Label style={{ marginRight: '10px', color: 'pink',marginTop:'7px' }}>Size</Form.Label>
@@ -268,8 +271,9 @@ const Ckurta = () => {
       </Row>
 
       {/* Footer Section */}
-      <Dilfooter />
     </Container>
+    <Dilfooter />
+    </div>
   );
 };
 

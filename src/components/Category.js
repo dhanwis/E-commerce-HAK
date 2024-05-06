@@ -7,7 +7,8 @@ import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom'; // Import for navigation
 import './Category.css'; // Import your custom CSS file (optional)
 import k4 from '../images/k4.webp';
-
+import Dilfooter from './Dilfooter';
+import Navbar1 from './Navbar1';
 
 function Category() {
   const categoryItems = [
@@ -20,13 +21,15 @@ function Category() {
   ];
 
   return (
+    <div>
+      <Navbar1/>
     <Container>
       <h4 className='ctitle'>Category</h4>
-      <Row   className='scroll-row'>
+      <Row className='scroll-row'>
         {categoryItems.map((item) => (
-          <Col key={item.name} >
+          <Col key={item.name}>
             <Link to={item.path} style={{textDecoration:'none'}}>
-              <Card data-aos="fade-right" className='cbackground' style={{ width: '9rem' }}>
+              <Card className='cbackground' style={{ width: '9rem' }}>
                 <Card.Img
                   className='category'
                   variant="top"
@@ -37,7 +40,7 @@ function Category() {
                     height: '10rem', // Explicit height to match width
                   }}
                 />
-                <Card.Body data-aos="fade-up" className='cat'>
+                <Card.Body className='cat'>
                   <Card.Title className='cat'>{item.name}</Card.Title>
                 </Card.Body>
               </Card>
@@ -46,6 +49,8 @@ function Category() {
         ))}
       </Row>
     </Container>
+    <Dilfooter/>
+    </div>
   );
 }
 

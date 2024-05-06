@@ -11,17 +11,13 @@
     }
     .cbackground{
         border:none;
-        background-color: black;
     }
     .ctitle{
         font-family: serif;
         font-size:30px;
         font-weight: bold;
         color:  rgb(238, 0, 111);
-        background-color: black;
     }
-
   .cat{
-    background-color: black;
-    color: white;
+    color: black;
   }

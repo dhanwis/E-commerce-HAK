@@ -1,22 +1,28 @@
- *{
-    background-color: black;
-  }
 
 #page1 {
   width: 100%;
-  height: 200vh; /* Extend to allow for scrolling */
-  background-color: black;
+  height: 200vh; 
 }
 
 #nav {
   color: rgb(250, 43, 140);
+  background: black;
   font-size: 20px;
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  z-index: 2; /* Keep the nav above the banner */
+}
+#nav1 {
+  color: rgb(250, 43, 140);
+  background: black;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
 }
 
 .navcon {
@@ -24,17 +30,17 @@
 }
 
 .navcon1 {
-  margin-left: -10px;
+  margin-left: -400px;
 }
 
 .dillogo {
   margin-left: 150px;
-  margin-top: 2rem;
+  background: none;
 }
 
 .dillogo1 {
-  margin-left: 150px;
-  margin-top: 2rem;
+  margin-left: 300px;
+  margin-right: 35px;
 }
 
 .navcontent {
@@ -43,10 +49,14 @@
 }
 
 .navcontent1 {
+  margin-left: 100px;
+  margin-right: -350px;
   gap: 20px;
   display: flex;
 }
-
+.login{
+  margin-right :-30px;
+}
 /* Banner styles */
 .banner {
   position: fixed;
@@ -68,18 +78,7 @@
   margin-top: -125px; /* Adjusted position */
 }
 
-/* CSS transition for text visibility */
-#nav h4 {
-  transition: opacity 0.5s ease; /* Smooth transition for visibility */
-}
 
-.hidden {
-  opacity: 0; /* Start hidden */
-}
-
-.visible {
-  opacity: 1; /* Become visible on scroll */
-}
 
 /* Media queries for responsive design */
 

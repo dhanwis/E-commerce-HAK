@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './ProductDetails.css';
 import banner from '../images/b1.avif';
+import Navbar1 from './Navbar1';
+import Dilfooter from './Dilfooter';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -34,6 +36,7 @@ const ProductDetails = () => {
 
   return (
     <div className="product-details">
+      <Navbar1/>
       <div className="container">
         <div className="row">
           <div className="col-md-6">
@@ -61,6 +64,7 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
+      <Dilfooter/>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
-import Navbar from './Navbar';
+import Navbar1 from './Navbar1';
 import './Bannerdetails.css';
 import b1 from '../components/b1.jpeg';
 import Dilfooter from './Dilfooter';
@@ -93,7 +93,7 @@ function Bannerdetails() {
 
   return (
     <div className='Bannerdetails'>
-      <Navbar />
+      <Navbar1/>
       {/* Filters */}
       <div className='Ban'>
         <Form>
