@@ -24,7 +24,7 @@ function Category() {
       <Row className='scroll-row'>
         {categoryItems.map((item) => (
           <Col key={item.name}>
-            <Link to={item.path}>
+            <Link to={item.path} style={{textDecoration:'none'}}>
               <Card className='cbackground' style={{ width: '9rem' }}>
                 <Card.Img
                   className='category'

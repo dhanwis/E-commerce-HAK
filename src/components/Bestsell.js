@@ -6,6 +6,9 @@ import b2 from '../images/b2.jpeg';
 import b4 from '../images/b5.jpg';
 import b5 from '../images/b5.webp';
 import b6 from '../images/b6.jpg';
+import b7 from '../images/b7.jpg';
+import b8 from '../images/b8.jpg';
+import b9 from '../images/b8.webp';
 import { Link } from 'react-router-dom';
 
 const ProductGallery = () => {
@@ -16,24 +19,24 @@ const ProductGallery = () => {
     { id: 4, name: 'Bestseller 1', imageUrl: b4 },
     { id: 5, name: 'Bestseller 2', imageUrl: b5 },
     { id: 6, name: 'Bestseller 3', imageUrl: b6 },
-    { id: 7, name: 'Bestseller 1', imageUrl: b1 },
-    { id: 8, name: 'Bestseller 2', imageUrl: b1 },
-    { id: 9, name: 'Bestseller 3', imageUrl: b1 },
+    { id: 7, name: 'Bestseller 1', imageUrl: b7 },
+    { id: 8, name: 'Bestseller 2', imageUrl: b8 },
+    { id: 9, name: 'Bestseller 3', imageUrl: b9 },
   ];
 
   const trendingProducts = [
     { id: 1, name: 'Trending 1', imageUrl: b1 },
-    { id: 2, name: 'Trending 2', imageUrl: b1 },
-    { id: 3, name: 'Trending 3', imageUrl: b1 },
+    { id: 2, name: 'Trending 2', imageUrl: b4 },
+    { id: 3, name: 'Trending 3', imageUrl: b7 },
   ];
 
   const featuredProducts = [
-    { id: 1, name: 'Featured 1', imageUrl: b1 },
-    { id: 2, name: 'Featured 2', imageUrl: b1 },
-    { id: 3, name: 'Featured 3', imageUrl: b1 },
-    { id: 4, name: 'Featured 1', imageUrl: b1 },
-    { id: 5, name: 'Featured 2', imageUrl: b1 },
-    { id: 6, name: 'Featured 3', imageUrl: b1 },
+    { id: 1, name: 'Featured 1', imageUrl: b2 },
+    { id: 2, name: 'Featured 2', imageUrl: b8 },
+    { id: 3, name: 'Featured 3', imageUrl: b5 },
+    { id: 4, name: 'Featured 1', imageUrl: b3 },
+    { id: 5, name: 'Featured 2', imageUrl: b9 },
+    { id: 6, name: 'Featured 3', imageUrl: b6 },
   ];
 
   const [selectedOption, setSelectedOption] = useState('bestsellers');
@@ -43,7 +46,7 @@ const ProductGallery = () => {
       <div className="row" >
         {products.map(product => (
           <div className="col-md-4 mb-4" key={product.id}>
-            <Link to={`/product/${product.id}`} className="card-link">
+            <Link to={`/product/${product.id}`} className="card-link" style={{textDecoration:'none'}}>
               <div className="card">
                 <img src={product.imageUrl} className="card-img-top" alt={product.name} style={{height:'250px'}}/>
                 <div className="card-body">
