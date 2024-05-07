@@ -17,9 +17,17 @@ import Cchuridar from './components/Cchuridar';
 import Bannerdetails from './components/Bannerdetails';
 import ProductDetails from './components/ProductDetails';
 import ProductDescription from './components/ProductDescription'; // Create this component
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import { useEffect } from 'react';
 
-// The main content of the homepage
 const SimpleAnimation = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: 'ease-in-out', // Easing function for animations
+    });
+  }, []);
   return (
     <div id="page1">
       <Navbar />

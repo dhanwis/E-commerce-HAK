@@ -26,7 +26,7 @@ function Category() {
         {categoryItems.map((item) => (
           <Col key={item.name}>
             <Link to={item.path} style={{textDecoration:'none'}}>
-              <Card className='cbackground' style={{ width: '9rem' }}>
+              <Card data-aos="fade-right" className='cbackground' style={{ width: '9rem' }}>
                 <Card.Img
                   className='category'
                   variant="top"
@@ -37,7 +37,7 @@ function Category() {
                     height: '10rem', // Explicit height to match width
                   }}
                 />
-                <Card.Body className='cat'>
+                <Card.Body data-aos="fade-up" className='cat'>
                   <Card.Title className='cat'>{item.name}</Card.Title>
                 </Card.Body>
               </Card>
