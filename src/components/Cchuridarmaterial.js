@@ -290,8 +290,8 @@ const Cchuridarmaterial = () => {
                     <Card.Body>
                       <Card.Title>{card.title}</Card.Title>
                       <Card.Text>{card.description}</Card.Text>
-                      <Button variant="primary">Add to Cart</Button>
-                      <Button variant="primary">Buy Now</Button>
+                      <Button variant="" style={{color:' rgb(250, 43, 140)'}}>Add to Cart</Button>
+                      <Button variant=""style={{color:' rgb(250, 43, 140)'}}>Buy Now</Button>
                     </Card.Body>
                   </Card>
                 </Col>
