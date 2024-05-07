@@ -218,18 +218,18 @@ const Ckurta = () => {
           <Col md={3}>
             {/* Sidebar */}
             <div style={{ backgroundColor: '#f9f9f9', padding: '20px', height: '50%', marginTop: '100px' }}>
-              <h5>Filters</h5>
+            <Button variant="">FILTER</Button>
               <hr />
-              <h6>CATEGORIES</h6>
+              <Button variant="" >CATEGORIES</Button>
               {/* Add your category filters here */}
               <hr />
-              <h6>Pricing</h6>
+              <Button variant="">PRICING</Button>
               {/* Add your pricing filters here */}
               <hr />
-              <h6>Brand</h6>
+              <Button variant="">BRAND</Button>
               {/* Add your brand filters here */}
               <hr />
-              <h6>Discount</h6>
+              <Button variant="">DISCOUNT</Button>
               {/* Add your discount filters here */}
             </div>
           </Col>
