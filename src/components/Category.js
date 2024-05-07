@@ -7,8 +7,6 @@ import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom'; // Import for navigation
 import './Category.css'; // Import your custom CSS file (optional)
 import k4 from '../images/k4.webp';
-import Dilfooter from './Dilfooter';
-import Navbar1 from './Navbar1';
 
 function Category() {
   const categoryItems = [
@@ -22,7 +20,6 @@ function Category() {
 
   return (
     <div>
-      <Navbar1/>
     <Container>
       <h4 className='ctitle'>Category</h4>
       <Row className='scroll-row'>
@@ -49,7 +46,6 @@ function Category() {
         ))}
       </Row>
     </Container>
-    <Dilfooter/>
     </div>
   );
 }
