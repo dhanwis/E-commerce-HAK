@@ -175,7 +175,7 @@ const Cchuridar = () => {
     let filtered = initialCardData;
 
     if (filters.size) {
-      filtered = filtered.filter((card) => card.size === filters.size);
+      filtered = filtered.filter((card) => card.size === filters.size );
     }
 
     if (filters.color) {
@@ -198,6 +198,9 @@ const Cchuridar = () => {
       case 'popularity':
         sortedData.sort((a, b) => b.popularity - a.popularity); // Most popular first
         break;
+      case 'newest_first':
+        sortedData.reverse(); // Newest first
+        break;
       case 'default':
       default:
         sortedData = [...initialCardData]; // Default or reset order
@@ -209,75 +212,93 @@ const Cchuridar = () => {
 
   return (
     <div>
-      <Navbar1/>
-    <Container fluid>
-      <Row style={{ paddingTop: '205px', justifyContent: 'flex-end' ,paddingBottom:'7px'}}> {/* Right-align the row content */}
-        <Col xs={4}>
-          <Form.Group style={{ display: 'flex', justifyContent: 'flex-end' }}> {/* Align label and control to the right */}
-            <Form.Label style={{ marginRight: '10px', color: 'pink',marginTop:'7px' }}>Size</Form.Label>
-                <Form.Control
-                as="select"
-                onChange={(e) => handleFilterChange({ size: e.target.value })}
-                style={{ background: 'none', color: 'pink',width:'100px' }}>
-                <option value="">All Sizes</option>
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-                <option value="Extra Large">Extra Large</option>
-                </Form.Control>
-            <Form.Label style={{ color: 'pink',marginRight: '8px' ,marginLeft:'8px',marginTop:'7px'}}>Color</Form.Label>
-                    <Form.Control
+      <Navbar1 />
+      <Container fluid>
+        <Row>
+          <Col md={3}>
+            {/* Sidebar */}
+            <div style={{ backgroundColor: '#f9f9f9', padding: '20px', height: '50%', marginTop: '100px' }}>
+              <h5>Filters</h5>
+              <hr />
+              <h6>CATEGORIES</h6>
+              {/* Add your category filters here */}
+              <hr />
+              <h6>Pricing</h6>
+              {/* Add your pricing filters here */}
+              <hr />
+              <h6>Brand</h6>
+              {/* Add your brand filters here */}
+              <hr />
+              <h6>Discount</h6>
+              {/* Add your discount filters here */}
+            </div>
+          </Col>
+          <Col md={9}>
+            {/* Product Card Grid */}
+            <Row style={{ paddingTop: '10px', justifyContent: 'center', paddingBottom: '7px' }}>
+              <Col xs={12} md={6}>
+                <Form.Group style={{ display: 'flex', justifyContent: 'center' }}>
+                  <Form.Label style={{ marginRight: '10px', color: 'dark pink', marginTop: '7px' }}>Size</Form.Label>
+                  <Form.Control
+                    as="select"
+                    onChange={(e) => handleFilterChange({ size: e.target.value })}
+                    style={{ background: 'none', color: 'dark pink', width: '100px' }}>
+                    <option value="">All Sizes</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="Extra Large">Extra Large</option>
+                  </Form.Control>
+                  <Form.Label style={{ color: 'dark pink', marginRight: '8px', marginLeft: '8px', marginTop: '7px' }}>Color</Form.Label>
+                  <Form.Control
                     as="select"
                     onChange={(e) => handleFilterChange({ color: e.target.value })}
-                    style={{ background: 'none', color: 'pink' ,width:'100px'}}>
+                    style={{ background: 'none', color: 'dark pink', width: '100px' }}>
                     <option value="">All Colors</option>
                     <option value="Red">Red</option>
                     <option value="Blue">Blue</option>
                     <option value="Green">Green</option>
                     <option value="Black">Black</option>
-                    <option value="Pink">Pink</option>
-                    <option value="Yellow">Yellow</option>
                     <option value="White">White</option>
                     <option value="Purple">Purple</option>
-                    <option value="Violet">Violet</option>
-                    </Form.Control>
-            <Form.Label style={{color: 'pink',marginRight: '8px' ,marginLeft:'8px',marginTop:'7px'}}>Sort By</Form.Label>
-            <Form.Control
-              as="select"
-              onChange={(e) => handleSortChange(e.target.value)}
-              style={{ background: 'none', color: 'pink' ,width:'100px'}}
-            >
-              <option value="default">Default</option>
-              <option value="price_low_high">Price: Low to High</option>
-              <option value="price_high_low">Price: High to Low</option>
-              <option value="popularity">Popularity</option>
-            </Form.Control>
-          </Form.Group>
-        </Col>
-
-      </Row>
-      
-
-      {/* Product Card Grid */}
-      <Row>
-        {filteredData.map((card, index) => (
-          <Col xs={12} sm={6} md={3} key={index}> {/* Responsive layout */}
-            <Card style={{ width: '400px', marginBottom: '20px' }}> {/* Consistent card width */}
-              <Card.Img variant="top" src={card.image} style={{ width: '100%', height: '500px' }} /> {/* Set image size */}
-              <Card.Body>
-                <Card.Title>{card.title}</Card.Title>
-                <Card.Text>{card.description}</Card.Text>
-                <Button variant="primary">Add to Cart</Button>
-                <Button variant="primary">Buy Now</Button>
-              </Card.Body>
-            </Card>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Pink">Pink</option>
+                  </Form.Control>
+                  <Form.Label style={{ color: 'dark pink', marginRight: '8px', marginLeft: '8px', marginTop: '7px' }}>Sort By</Form.Label>
+                  <Form.Control
+                    as="select"
+                    onChange={(e) => handleSortChange(e.target.value)}
+                    style={{ background: 'none', color: 'dark pink', width: '150px' }}
+                  >
+                    <option value="default">Default</option>
+                    <option value="popularity">Popularity</option>
+                    <option value="price_low_high">Price: Low to High</option>
+                    <option value="price_high_low">Price: High to Low</option>
+                    <option value="newest_first">Newest First</option>
+                  </Form.Control>
+                </Form.Group>
+              </Col>
+            </Row>
+            <Row>
+              {filteredData.map((card, index) => (
+                <Col xs={12} sm={6} md={3} key={index}>
+                  <Card style={{ width: '300px', marginBottom: '20px' ,marginLeft:'-12rem'}}>
+                    <Card.Img variant="top" src={card.image} style={{ width: '100%', height: '300px'}} />
+                    <Card.Body>
+                      <Card.Title>{card.title}</Card.Title>
+                      <Card.Text>{card.description}</Card.Text>
+                      <Button variant="primary">Add to Cart</Button>
+                      <Button variant="primary">Buy Now</Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
           </Col>
-        ))}
-      </Row>
-
-      {/* Footer Section */}
-    </Container>
-    <Dilfooter />
+        </Row>
+      </Container>
+      <Dilfooter />
     </div>
   );
 };

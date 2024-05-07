@@ -17,6 +17,7 @@ import Cchuridar from './components/Cchuridar';
 import Bannerdetails from './components/Bannerdetails';
 import ProductDetails from './components/ProductDetails';
 import ProductDescription from './components/ProductDescription'; // Create this component
+import Csareedescription from './components/Csareedescription'; 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import { useEffect } from 'react';
@@ -56,6 +57,8 @@ const App = () => {
         <Route path="/Bannerdetails" element={<Bannerdetails/>} />
         <Route path="/product/:id" element={<ProductDetails/>} />
         <Route path="/sarees/:Id" element={<ProductDescription />} /> 
+        <Route path="/sarees/:Id" element={<Csareedescription />} /> 
+
 
         {/* Add more routes as needed */}
       </Routes>
