@@ -35,8 +35,9 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="product-details">
+    <div>
       <Navbar1/>
+    <div className="product-details">
       <div className="container">
         <div className="row">
           <div className="col-md-6">
@@ -63,6 +64,7 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <Dilfooter/>
     </div>

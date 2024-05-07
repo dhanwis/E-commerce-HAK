@@ -1,6 +1,6 @@
 .product-details{
-    padding-top: 250px;
-    color: white;
+    padding-top: 25px;
+    color: black;
 }
 
 .product-details {
@@ -20,9 +20,10 @@
     margin-right: 10px;
     margin-bottom: 10px;
     padding: 8px 12px;
-    border: 1px solid #ccc;
+    border: 1px solid  #ff009d;
     border-radius: 5px;
-    background-color: #f0f0f0;
+    background-color:  #ff009d;
+    color: white;
     cursor: pointer;
   }
   
