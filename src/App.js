@@ -18,6 +18,7 @@ import Bannerdetails from './components/Bannerdetails';
 import ProductDetails from './components/ProductDetails';
 import ProductDescription from './components/ProductDescription'; // Create this component
 import Csareedescription from './components/Csareedescription'; 
+import Login from './components/Login';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import { useEffect } from 'react';
@@ -58,7 +59,7 @@ const App = () => {
         <Route path="/product/:id" element={<ProductDetails/>} />
         <Route path="/sarees/:Id" element={<ProductDescription />} /> 
         <Route path="/sarees/:Id" element={<Csareedescription />} /> 
-
+        <Route path="/login" element={<Login/>} /> 
 
         {/* Add more routes as needed */}
       </Routes>

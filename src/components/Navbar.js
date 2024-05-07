@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import logo1 from '../images/logo1.png';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Navbar.css';
 
 function Navbar() {
@@ -7,9 +8,8 @@ function Navbar() {
   const [isVisible, setIsVisible] = useState(false); // Track the visibility of "Contact Us"
   const [sidebarOpen, setSidebarOpen] = useState(false); // Track if sidebar is open
   const [topSlidebarOpen, setTopSlidebarOpen] = useState(false); // Track if top slidebar is open
-  const [loginOpen, setLoginOpen] = useState(false); // Track if login panel is open
-  const [mobileNumber, setMobileNumber] = useState(''); // Track the mobile number input value
-  const [otpSent, setOtpSent] = useState(false); // Track if OTP is sent
+  const navigate = useNavigate(); 
+ 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,14 +42,8 @@ function Navbar() {
     setTopSlidebarOpen(false); // Close top slidebar on click
   };
 
-  const toggleLogin = () => {
-    setLoginOpen(!loginOpen); // Toggle login panel on click
-  };
+  const handleLoginClick = () => navigate('/login'); 
 
-  const sendOTP = () => {
-    // Here you can implement the logic to send OTP to the entered mobile number
-    setOtpSent(true); // Set OTP sent flag to true
-  };
 
   return (
     <div id="nav">
@@ -82,7 +76,7 @@ function Navbar() {
         >
           SEARCH
         </h4>
-        <h4 className={isVisible ? 'visible' : 'hidden'} onClick={toggleLogin}>
+        <h4 className={isVisible ? 'visible' : 'hidden'} onClick={handleLoginClick} >
           LOGIN
         </h4>
       </div>
@@ -111,30 +105,7 @@ function Navbar() {
         </div>
       )}
 
-      {/* Login panel */}
-      {loginOpen && (
-        <div className="login-panel text-center"><p style={{fontFamily:'serif',fontWeight:'bold'}}>LOGIN</p>
-          <div className="login-form">
-            <input
-              type="text"
-              placeholder="Enter Mobile Number"
-              value={mobileNumber}
-              onChange={(e) => setMobileNumber(e.target.value)}
-              className="login-input"
-            />
-            {otpSent ? (
-              <input
-                type="text"
-                placeholder="Enter OTP"
-                // Handle OTP verification here
-                className="login-input"
-              />
-            ) : (
-              <button onClick={sendOTP} className="send-otp-btn">Send OTP</button>
-            )}
-          </div>
-        </div>
-      )}
+     
     </div>
   );
 }
