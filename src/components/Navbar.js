@@ -9,12 +9,10 @@ function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false); // Track if sidebar is open
   const [topSlidebarOpen, setTopSlidebarOpen] = useState(false); // Track if top slidebar is open
   const navigate = useNavigate(); 
- 
-
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-
       setIsScaled(scrollPosition > 50);
       setIsVisible(scrollPosition > 100);
     };
@@ -44,53 +42,58 @@ function Navbar() {
 
   const handleLoginClick = () => navigate('/login'); 
 
-
   return (
     <div id="nav">
       <div className="navcon">
-        <h4
-          onClick={toggleSidebar} // Toggle the sidebar when clicked
-          className={isVisible ? 'visible' : 'hidden'}
-          style={{ cursor: 'pointer' }}
-        >
-          CONTACT
-        </h4>
+        {isVisible && (
+          <h4
+            onClick={toggleSidebar} // Toggle the sidebar when clicked
+            style={{ cursor: 'pointer' }}
+          >
+            CONTACT
+          </h4>
+        )}
       </div>
 
-      <div className="dillogo">
+      <div className={`dillogo ${isScaled ? 'scrolled' : ''}`}>
         <img
           src={logo1}
           alt="Logo"
+          width='1000px'
+          height='420px'
           className={isScaled ? 'scaled' : ''}
           style={{
-            transition: 'transform 0.5s ease', // Scaling transition
+            transition: 'transform 0.8s ease', // Scaling transition
           }}
         />
       </div>
 
       <div className="navcontent">
-        <h4
-          onClick={toggleTopSlidebar} // Toggle the top slidebar when clicked
-          className={isVisible ? 'visible' : 'hidden'}
-          style={{ cursor: 'pointer' }}
-        >
-          SEARCH
-        </h4>
-        <h4 className={isVisible ? 'visible' : 'hidden'} onClick={handleLoginClick} >
-          LOGIN
-        </h4>
+        {isVisible && (
+          <>
+            <h4
+              onClick={toggleTopSlidebar} // Toggle the top slidebar when clicked
+              style={{ cursor: 'pointer' }}
+            >
+              SEARCH
+            </h4>
+            <h4 onClick={handleLoginClick} style={{ cursor: 'pointer' }}>
+              LOGIN
+            </h4>
+          </>
+        )}
       </div>
 
       {/* Sidebar with contact details and a close button */}
       {sidebarOpen && (
-        <div className="sidebar" >
+        <div className="sidebar">
           <button onClick={closeSidebar} className="close-sidebar">
-          <i class="fa-solid fa-circle-xmark" style={{backgroundColor:' rgb(253, 168, 208)'}}></i>
-          </button>&nbsp;&nbsp;
-          <ul style={{backgroundColor:' rgb(253, 168, 208)'}}>
-            <li style={{backgroundColor:' rgb(253, 168, 208)'}}>Phone: 123-456-7890</li>
-            <li style={{backgroundColor:' rgb(253, 168, 208)'}}>Email: contact@dilhak.com</li>
-            <li style={{backgroundColor:' rgb(253, 168, 208)'}}>Address: 123 DILHAK St, City</li>
+            <i className="fa-solid fa-circle-xmark" style={{ backgroundColor: 'rgb(253, 168, 208)' }}></i>
+          </button>
+          <ul style={{ backgroundColor: 'rgb(253, 168, 208)' }}>
+            <li style={{ backgroundColor: 'rgb(253, 168, 208)' }}>Phone: 123-456-7890</li>
+            <li style={{ backgroundColor: 'rgb(253, 168, 208)' }}>Email: contact@dilhak.com</li>
+            <li style={{ backgroundColor: 'rgb(253, 168, 208)' }}>Address: 123 DILHAK St, City</li>
           </ul>
         </div>
       )}
@@ -105,7 +108,6 @@ function Navbar() {
         </div>
       )}
 
-     
     </div>
   );
 }

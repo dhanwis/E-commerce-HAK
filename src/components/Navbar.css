@@ -6,31 +6,21 @@
   padding: 10px;
   height: 70px; /* Set a fixed height for the navbar */
   cursor: pointer;
-
-  /* background-color: rgb(253, 168, 208); */
+  color: rgb(250, 43, 140);
+  font-size: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background: black; /* Remove background color */
 }
 
 /* Dillogo styles */
 .dillogo {
-  margin-top: 100px;
-  margin-left: 10px;
-  background:none; 
+  margin-top: 320px;
+  margin-left: 250px;
+  margin-right: auto;
 }
 
-/* Contact and Search styles */
-.navcon h4 {
-  margin-left: 20px;
-}
-
-.navcon,
-.navcontent {
-  display: flex;
-  align-items: center;
-}
-
-.navcontent {
-  margin-right: 10px;
-}
 
 /* Sidebar styles */
 .sidebar {
@@ -127,39 +117,33 @@
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-  /* Adjust dillogo margin for smaller screens */
-  #nav{
-    background-color: rgb(253, 168, 208);
+  .dillogo {
+    margin-top: 20px; /* Adjust margin for smaller screens */
   }
-  .dillogo{
-    margin-top: 100px;
-    margin-left: -400px;
+  .card {
+    width: 100%; /* Make the card full width on smaller screens */
+    margin: 10px 0; /* Adjust margin for smaller screens */
   }
-  /* Adjust margin for contact and search */
-  .navcon h4 {
-    margin-left: 5px;
-  }
-  .navcontent {
-    margin-top: 10px;
-    margin-left: -400px;
-  }
-
-  .top-slidebar {
-    left: 30%; 
-    width: 30%; 
-  }
-
-  /* Adjust width and right margin of login panel */
-  .login-panel {
-    margin-right: 150px;
-    width: 60%; 
-  }
-
-  /* Display search and login in the same line with space in between */
-  .navcontent h4 {
-    margin-left: 10px; /* Add space between elements */
+  #nav {
+    height: auto; /* Allow the navbar height to adjust based on content */
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    padding: 20px; /* Increase padding for better spacing */
   }
 }
-.Banner{
-  filter: blur(5px); /* Adjust the blur intensity as needed */
+
+/* For screens larger than 1200px */
+@media (min-width: 1200px) {
+  /* Adjustments for larger screens */
+  .dillogo img {
+    max-width: 80%; /* Make the logo slightly smaller on larger screens */
+  }
+  
+  .card {
+    width: 350px; /* Increase the width of cards for larger screens */
+    margin: 30px; /* Increase the margin around cards for better spacing */
+  }
+  
+  #nav {
+    font-size: 22px; /* Increase font size of navbar for better readability on larger screens */
+  }
 }

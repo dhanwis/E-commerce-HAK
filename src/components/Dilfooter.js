@@ -36,32 +36,32 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
     <MDBRow className='mt-3' style={{color:"pink"}}>
       <MDBCol md="3" lg="4" xl="3" className='mb-4'> {/* Remove mx-auto class */}
         <h6 className='text-uppercase fw-bold mb-4'>
-          <MDBIcon icon="gem" className="me-3"  />
-    <a href='#!' className='text-reset'>
+          <MDBIcon className="me-3"  />
+    <a href='#!' className='text-reset' style={{textDecoration:'none'}}>
             About Us
           </a>
         </h6>
         <h6 className='text-uppercase fw-bold mb-4'>
-          <MDBIcon icon="gem" className="me-3" />
-          <a href='#!' className='text-reset'>
-            Terms&Condition
+          <MDBIcon className="me-3" />
+          <a href='#!' className='text-reset' style={{textDecoration:'none'}}>
+            Terms & Conditions
           </a>
         </h6>
         <h6 className='text-uppercase fw-bold mb-4'>
-          <MDBIcon icon="gem" className="me-3" />
-          <a href='#!' className='text-reset'>
+          <MDBIcon className="me-3" />
+          <a href='#!' className='text-reset' style={{textDecoration:'none'}}>
             F & Q
           </a>
         </h6>
         <h6 className='text-uppercase fw-bold mb-4'>
-          <MDBIcon icon="gem" className="me-3" />
-          <a href='#!' className='text-reset'>
+          <MDBIcon className="me-3" />
+          <a href='#!' className='text-reset' style={{textDecoration:'none'}}>
             Return Policy
           </a>
         </h6>
         <h6 className='text-uppercase fw-bold mb-4'>
-          <MDBIcon icon="gem" className="me-3" />
-          <a href='#!' className='text-reset'>
+          <MDBIcon className="me-3" />
+          <a href='#!' className='text-reset' style={{textDecoration:'none'}}>
             Refund Policy
           </a>
         </h6>
@@ -85,8 +85,8 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
 
       <div className='text-center p-4' style={{color:"pink"}}>
         © 2024 Copyright:
-        <a className='text-reset fw-bold' href='https://dil_Hak.com/'>
-          dil_Hak.com
+        <a className='text-reset fw-bold' style={{textDecoration:'none'}} href='https://dil_Hak.com/'>
+          dil-Hak.com
         </a>
       </div>
     </MDBFooter>

@@ -4,21 +4,12 @@
   height: 200vh; 
 }
 
-#nav {
-  color: rgb(250, 43, 140);
-  background: black;
-  font-size: 20px;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  z-index: 2;
-}
+
 #nav1 {
   color: rgb(250, 43, 140);
   background: black;
   font-size: 20px;
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,16 +19,13 @@
 
 .navcon {
   margin-left: -10px;
+  background: transparent;
 }
 
 .navcon1 {
   margin-left: -400px;
 }
 
-.dillogo {
-  margin-left: 150px;
-  background: none;
-}
 
 .dillogo1 {
   margin-left: 300px;
@@ -47,6 +35,7 @@
 .navcontent {
   gap: 20px;
   display: flex;
+  background: transparent;
 }
 
 .navcontent1 {
@@ -60,26 +49,25 @@
 }
 /* Banner styles */
 .banner {
-  position: fixed;
   width: 100%;
   height: 50px; /* Default banner height */
   text-align: center;
-  background-color: #f0f0f0; /* Default background color */
 }
 
 .banner-img {
   margin-top: 60px;
   width: 100%; /* Ensure the image fills the banner */
-  height: 750px; /* Maintain the height */
+  height: 550px; /* Maintain the height */
 }
 
 /* CSS transition for image scaling */
 .scaled {
   transform: scale(0.3); /* Apply scaling */
-  margin-top: -125px; /* Adjusted position */
+  margin-top: -320px; /* Adjusted position */
+  width: 1000px;
+  height: 270px;
+
 }
-
-
 
 /* Media queries for responsive design */
 
