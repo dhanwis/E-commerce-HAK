@@ -1,0 +1,46 @@
+/* bansarees.css */
+
+  
+  .card {
+    border: none; /* Explicitly remove border */
+    box-shadow: none; /* Explicitly remove box-shadow */
+}
+
+.card .slide.slide1.slide2 {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    transition: 0.9s;
+    transform: translateY(100px);
+    
+}
+
+.card:hover .slide.slide1 {
+    transform: translateY(10px);
+    transition: 0.15s;
+    opacity: 1;
+    
+}
+
+.card .button1 {
+    /* position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: 0.8s;
+    transform: translateY(-100px); */
+
+    list-style: none;
+	margin: 0 10px;
+	transform: translateY(10px);
+	transition: 0.9s;
+	opacity: 0;
+}
+
+.card:hover .button1 {
+    /* transform: translateY(0); */
+    transform: translateY(0px);
+    margin-top: 2px;
+	opacity: 1;
+}

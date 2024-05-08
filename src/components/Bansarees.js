@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Form, Card, Button } from 'react-bootstrap';
 import Navbar1 from './Navbar1';
 import Dilfooter from './Dilfooter';
+import './Bansarees.css'
 import { useNavigate } from 'react-router-dom'; // for navigation
 
 // Import images (as your provided images)
@@ -204,23 +205,33 @@ const Bansarees = () => {
 
       {/* Product Card Grid */}
       <Row>
-        {filteredData.map((card) => (
-          <Col xs={12} sm={6} md={3} key={card.id}> {/* Responsive layout */}
-            <Card
-              style={{  cursor: 'pointer',margin:'5px' }}
-              onClick={() => handleCardClick(card.id)} // Navigate to the product page on click
-            >
-              <Card.Img variant="top" src={card.image} style={{width: '100%',height:'600px'}}/>
-              <Card.Body>
-                <Card.Title>{card.title}</Card.Title>
-                <Card.Text>{card.description}</Card.Text>
-                <Button variant="primary">Add to Cart</Button> {/* Placeholder button */}
-                <Button variant="primary">Buy Now</Button> {/* Placeholder button */}
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+                {filteredData.map((card) => (
+                    <Col xs={12} sm={6} md={3} key={card.id}> {/* Responsive layout */}
+                        <Card
+                            className="card"
+                            onClick={() => handleCardClick(card.id)} // Navigate to the product page on click
+                            style={{ cursor: 'pointer', margin: '5px' }}
+                        >
+                          
+
+                            <div className="slide slide1"> {/* Apply slide1 styles */}
+                                <Card.Img variant="top" src={card.image}  style={{width: '100%',height:'600px'}}/>
+                            </div>
+
+                            <div className="slide slide2"> {/* Apply slide2 styles */}
+                                <Card.Body>
+                                    <div className="content">
+                                        <Card.Title>{card.title}</Card.Title>
+                                        <Card.Text>{card.description}</Card.Text>
+                                    </div>
+                                    <Button className='button1'>Add to Cart</Button> {/* Placeholder button */}
+                                    <Button className='button1'>Buy Now</Button> {/* Placeholder button */}
+                                </Card.Body>
+                            </div>
+                        </Card>
+                    </Col>
+                ))}
+            </Row>
       </Container>
       {/* Footer Section */}
       <Dilfooter />
